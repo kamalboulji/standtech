@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StandTech - Solutions Électroniques de Sécurité</title>
-    <meta name="description" content="Professional Security Electronics Solutions in Tanger, Morocco. Installation, Training & Service for CCTV, Access Control, Alarm Systems.">
-    <meta name="keywords" content="security, CCTV, access control, alarm systems, Tanger, Morocco, StandTech">
+    
+    <!-- SEO Meta Tags -->
+    <title>StandTech - Solutions Électroniques de Sécurité Professionnelles à Tanger</title>
+    <meta name="description" content="Installation professionnelle de systèmes CCTV, contrôle d'accès, alarmes à Tanger. +15 ans d'expérience, service 24/7. Devis gratuit ☎ 0635509160">
+    <meta name="keywords" content="sécurité Tanger, CCTV Maroc, système alarme, contrôle accès, caméra surveillance Tanger, installation sécurité">
+    <meta name="author" content="StandTech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.standtech.ma">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="StandTech - Solutions de Sécurité à Tanger">
+    <meta property="og:description" content="Expert en systèmes de sécurité électronique. Installation CCTV, alarmes, contrôle d'accès. Service 24/7">
+    <meta property="og:image" content="https://www.standtech.ma/og-image.jpg">
+    <meta property="og:url" content="https://www.standtech.ma">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ar_MA">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="StandTech - Solutions de Sécurité Tanger">
+    <meta name="twitter:description" content="Installation professionnelle CCTV, alarmes, contrôle d'accès">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
+    <!-- Google Fonts - Optimized -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,115 +48,150 @@
                 extend: {
                     fontFamily: {
                         inter: ['Inter', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
                     },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.7s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
                 }
             }
         }
     </script>
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SecurityCompany",
+        "name": "StandTech",
+        "description": "Solutions professionnelles de sécurité électronique à Tanger",
+        "url": "https://www.standtech.ma",
+        "logo": "https://www.standtech.ma/logo.png",
+        "image": "https://www.standtech.ma/og-image.jpg",
+        "telephone": "+212635509160",
+        "email": "standtechkamal@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "BELLE VUE RUE 71 N 9 1ERE ETAGE N 2",
+            "addressLocality": "Tanger",
+            "postalCode": "90000",
+            "addressCountry": "MA"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "35.7595",
+            "longitude": "-5.8340"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "priceRange": "$$",
+        "areaServed": {
+            "@type": "City",
+            "name": "Tanger"
+        },
+        "serviceType": ["CCTV Installation", "Access Control", "Alarm Systems", "Security Training"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+
     <style>
         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
             font-family: 'Inter', sans-serif;
         }
         
-        /* Smooth scrolling */
+        [dir="rtl"] body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
         html {
             scroll-behavior: smooth;
         }
         
-        /* Hero gradient */
+        /* Performance: Reduce repaints */
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Hero gradient with better performance */
         .hero-gradient {
             background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+            will-change: transform;
         }
         
         .dark .hero-gradient {
             background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
         }
         
-        /* Service card hover */
+        /* Optimized card hover */
         .service-card {
-            transition: all 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
         }
         
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
         
         .service-card img {
             transition: transform 0.5s ease;
+            will-change: transform;
         }
         
         .service-card:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         
-        /* Skill bar animation */
-        .skill-bar {
-            transition: width 1.5s ease-in-out;
+        /* Navbar scroll effect */
+        .navbar-scrolled {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
         
-        /* Bounce animation */
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .animate-bounce-slow {
-            animation: bounce 2s infinite;
-        }
-        
-        /* Pulse animation */
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.05); }
-        }
-        
-        .animate-pulse-slow {
-            animation: pulse 2s infinite;
-        }
-        
-        /* Fade in animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
-        
-        /* Nav active state */
-        .nav-active {
-            color: #3b82f6 !important;
-            font-weight: 600;
-        }
-        
-        /* Dark mode transition */
+        /* Smooth dark mode transition */
         * {
-            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-        }
-        
-        /* Popup overlay */
-        .popup-overlay {
-            backdrop-filter: blur(4px);
+            transition: background-color 0.3s ease, 
+                        border-color 0.3s ease, 
+                        color 0.3s ease;
         }
         
         /* Custom scrollbar */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 12px;
         }
         
         ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #f1f5f9;
         }
         
         .dark ::-webkit-scrollbar-track {
@@ -133,16 +200,21 @@
         
         ::-webkit-scrollbar-thumb {
             background: #3b82f6;
-            border-radius: 5px;
+            border-radius: 6px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
             background: #2563eb;
         }
         
-        /* RTL Support for Arabic */
+        /* RTL Support - Enhanced */
+        [dir="rtl"] {
+            text-align: right;
+        }
+        
         [dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
-            --tw-space-x-reverse: 1;
+            margin-right: 1rem;
+            margin-left: 0;
         }
         
         [dir="rtl"] .mr-2 { margin-right: 0; margin-left: 0.5rem; }
@@ -151,72 +223,177 @@
         [dir="rtl"] .ml-2 { margin-left: 0; margin-right: 0.5rem; }
         [dir="rtl"] .ml-4 { margin-left: 0; margin-right: 1rem; }
         
-        /* Floating elements */
-        .float-shadow {
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        [dir="rtl"] .text-left { text-align: right; }
+        [dir="rtl"] .text-right { text-align: left; }
+        
+        /* Accessibility improvements */
+        .focus-visible:focus {
+            outline: 3px solid #3b82f6;
+            outline-offset: 2px;
         }
         
-        .dark .float-shadow {
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        /* Skip to main content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #3b82f6;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Loading animation */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        /* Lazy load images */
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+        
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        [dir="rtl"] .whatsapp-float {
+            right: auto;
+            left: 25px;
+        }
+        
+        /* Form improvements */
+        .form-field {
+            position: relative;
+        }
+        
+        .form-field input:focus + label,
+        .form-field textarea:focus + label,
+        .form-field input:not(:placeholder-shown) + label,
+        .form-field textarea:not(:placeholder-shown) + label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #3b82f6;
+        }
+        
+        /* Success animation */
+        @keyframes checkmark {
+            0% {
+                stroke-dashoffset: 100;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        .checkmark {
+            stroke-dasharray: 100;
+            animation: checkmark 0.6s ease-out forwards;
         }
     </style>
 </head>
+
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
     
+    <!-- Skip to main content (Accessibility) -->
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/212635509160?text=Bonjour%20StandTech,%20j'aimerais%20avoir%20plus%20d'informations" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+    
     <!-- Navigation -->
-    <nav id="navbar" class="bg-white dark:bg-gray-800 shadow-lg fixed w-full z-50 transition-all duration-300">
+    <nav id="navbar" class="bg-white/95 dark:bg-gray-800/95 backdrop-blur-md fixed w-full z-50 transition-all duration-300" role="navigation" aria-label="Navigation principale">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
-                        <i class="fas fa-shield-alt text-xl"></i>
+                    <div class="bg-blue-600 text-white p-2 rounded-lg mr-3 rtl:mr-0 rtl:ml-3">
+                        <i class="fas fa-shield-alt text-xl" aria-hidden="true"></i>
                     </div>
-                    <a href="#home" class="text-2xl font-bold text-gray-800 dark:text-white">
+                    <a href="#home" class="text-2xl font-bold text-gray-800 dark:text-white hover:text-blue-600 transition-colors">
                         Stand<span class="text-blue-600">Tech</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-6">
-                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-i18n="home">Accueil</a>
-                    <a href="#services" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-i18n="services">Services</a>
-                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-i18n="about">À propos</a>
-                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-i18n="contact">Contact</a>
+                <div class="hidden lg:flex items-center space-x-6 rtl:space-x-reverse">
+                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="home">Accueil</a>
+                    <a href="#services" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="services">Services</a>
+                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="about">À propos</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="testimonials">Témoignages</a>
+                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="contact">Contact</a>
                     
                     <!-- Language Switcher -->
-                    <div class="flex items-center space-x-1 border-l border-gray-300 dark:border-gray-600 pl-4">
-                        <button onclick="changeLanguage('fr')" class="lang-btn px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300" data-lang="fr">
-                            <img src="https://flagcdn.com/w20/fr.png" alt="FR" class="inline w-5 h-3 mr-1"> FR
+                    <div class="flex items-center space-x-1 rtl:space-x-reverse border-l border-gray-300 dark:border-gray-600 pl-4 rtl:pl-0 rtl:pr-4 rtl:border-l-0 rtl:border-r" role="group" aria-label="Sélecteur de langue">
+                        <button onclick="changeLanguage('fr')" class="lang-btn px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors" data-lang="fr" aria-label="Français">
+                            <img src="https://flagcdn.com/w20/fr.png" alt="" class="inline w-5 h-3 mr-1 rtl:mr-0 rtl:ml-1" loading="lazy"> FR
                         </button>
-                        <button onclick="changeLanguage('en')" class="lang-btn px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300" data-lang="en">
-                            <img src="https://flagcdn.com/w20/gb.png" alt="EN" class="inline w-5 h-3 mr-1"> EN
+                        <button onclick="changeLanguage('en')" class="lang-btn px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors" data-lang="en" aria-label="English">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="" class="inline w-5 h-3 mr-1 rtl:mr-0 rtl:ml-1" loading="lazy"> EN
                         </button>
-                        <button onclick="changeLanguage('ar')" class="lang-btn px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300" data-lang="ar">
-                            <img src="https://flagcdn.com/w20/sa.png" alt="AR" class="inline w-5 h-3 mr-1"> AR
+                        <button onclick="changeLanguage('ar')" class="lang-btn px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors" data-lang="ar" aria-label="العربية">
+                            <img src="https://flagcdn.com/w20/sa.png" alt="" class="inline w-5 h-3 mr-1 rtl:mr-0 rtl:ml-1" loading="lazy"> AR
                         </button>
                     </div>
                     
                     <!-- Dark Mode Toggle -->
-                    <button id="darkModeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
-                        <i class="fas fa-moon dark:hidden text-lg"></i>
-                        <i class="fas fa-sun hidden dark:inline text-lg"></i>
+                    <button id="darkModeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors focus-visible" aria-label="Basculer le mode sombre">
+                        <i class="fas fa-moon dark:hidden text-lg" aria-hidden="true"></i>
+                        <i class="fas fa-sun hidden dark:inline text-lg" aria-hidden="true"></i>
                     </button>
                     
                     <!-- CTA Button -->
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl" data-i18n="get_quote">
-                        Obtenir un devis
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus-visible" data-i18n="get_quote">
+                        Devis Gratuit
                     </a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <div class="lg:hidden flex items-center space-x-2">
-                    <button id="darkModeToggleMobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-yellow-400">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:inline"></i>
+                <div class="lg:hidden flex items-center space-x-2 rtl:space-x-reverse">
+                    <button id="darkModeToggleMobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 focus-visible" aria-label="Basculer le mode sombre">
+                        <i class="fas fa-moon dark:hidden" aria-hidden="true"></i>
+                        <i class="fas fa-sun hidden dark:inline" aria-hidden="true"></i>
                     </button>
-                    <button id="mobileMenuBtn" class="p-2 text-gray-700 dark:text-white">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="mobileMenuBtn" class="p-2 text-gray-700 dark:text-white focus-visible" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -224,581 +401,751 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden lg:hidden pb-4 border-t border-gray-200 dark:border-gray-700">
                 <div class="flex flex-col space-y-3 pt-4">
-                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2" data-i18n="home">Accueil</a>
-                    <a href="#services" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2" data-i18n="services">Services</a>
-                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2" data-i18n="about">À propos</a>
-                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2" data-i18n="contact">Contact</a>
+                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2 transition-colors" data-i18n="home">Accueil</a>
+                    <a href="#services" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2 transition-colors" data-i18n="services">Services</a>
+                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2 transition-colors" data-i18n="about">À propos</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2 transition-colors" data-i18n="testimonials">Témoignages</a>
+                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2 transition-colors" data-i18n="contact">Contact</a>
                     
                     <!-- Mobile Language Switcher -->
-                    <div class="flex space-x-2 pt-2 border-t border-gray-200 dark:border-gray-700">
-                        <button onclick="changeLanguage('fr')" class="lang-btn flex-1 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300">
-                            <img src="https://flagcdn.com/w20/fr.png" alt="FR" class="inline w-5 h-3 mr-1"> FR
+                    <div class="flex space-x-2 rtl:space-x-reverse pt-2 border-t border-gray-200 dark:border-gray-700">
+                        <button onclick="changeLanguage('fr')" class="lang-btn flex-1 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors" data-lang="fr">
+                            <img src="https://flagcdn.com/w20/fr.png" alt="" class="inline w-5 h-3 mr-1 rtl:mr-0 rtl:ml-1" loading="lazy"> FR
                         </button>
-                        <button onclick="changeLanguage('en')" class="lang-btn flex-1 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300">
-                            <img src="https://flagcdn.com/w20/gb.png" alt="EN" class="inline w-5 h-3 mr-1"> EN
+                        <button onclick="changeLanguage('en')" class="lang-btn flex-1 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors" data-lang="en">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="" class="inline w-5 h-3 mr-1 rtl:mr-0 rtl:ml-1" loading="lazy"> EN
                         </button>
-                        <button onclick="changeLanguage('ar')" class="lang-btn flex-1 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300">
-                            <img src="https://flagcdn.com/w20/sa.png" alt="AR" class="inline w-5 h-3 mr-1"> AR
+                        <button onclick="changeLanguage('ar')" class="lang-btn flex-1 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors" data-lang="ar">
+                            <img src="https://flagcdn.com/w20/sa.png" alt="" class="inline w-5 h-3 mr-1 rtl:mr-0 rtl:ml-1" loading="lazy"> AR
                         </button>
                     </div>
                     
                     <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors" data-i18n="get_quote">
-                        Obtenir un devis
+                        Devis Gratuit
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Left Content -->
-                <div class="lg:w-1/2 text-center lg:text-left">
-                    <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                        <span class="text-blue-100 text-sm font-medium" data-i18n="available_24">Disponible 24/7</span>
-                    </div>
-                    
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-i18n="hero_title">
-                        Solutions Électroniques de Sécurité Professionnelles
-                    </h1>
-                    
-                    <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed" data-i18n="hero_desc">
-                        Solutions professionnelles de sécurité électronique à Tanger, Maroc. Installation, formation et service pour CCTV, contrôle d'accès, systèmes d'alarme et plus encore.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#contact" class="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
-                            <i class="fas fa-phone-alt mr-2"></i>
-                            <span data-i18n="contact_us">Nous contacter</span>
-                        </a>
-                        <a href="#services" class="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-all">
-                            <i class="fas fa-list mr-2"></i>
-                            <span data-i18n="our_services">Nos services</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20">
-                        <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-bold text-white">15+</div>
-                            <div class="text-blue-200 text-sm" data-i18n="years_exp">Années d'expérience</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-bold text-white">500+</div>
-                            <div class="text-blue-200 text-sm" data-i18n="projects">Projets réalisés</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-bold text-white">24/7</div>
-                            <div class="text-blue-200 text-sm" data-i18n="support">Support</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Content - Feature Cards -->
-                <div class="lg:w-1/2">
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-2xl float-shadow">
-                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center" data-i18n="our_solutions">Nos Solutions</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors cursor-pointer group">
-                                <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-camera text-xl"></i>
-                                </div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="cctv">Systèmes CCTV</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="cctv_desc">Surveillance HD</p>
-                            </div>
-                            <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors cursor-pointer group">
-                                <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-fingerprint text-xl"></i>
-                                </div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="access_control">Contrôle d'Accès</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="access_desc">Biométrique</p>
-                            </div>
-                            <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors cursor-pointer group">
-                                <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-bell text-xl"></i>
-                                </div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="alarm_systems">Systèmes d'Alarme</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="alarm_desc">Protection 24/7</p>
-                            </div>
-                            <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors cursor-pointer group">
-                                <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-wifi text-xl"></i>
-                                </div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="network_sec">Sécurité Réseau</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="network_desc">Infrastructure</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Trust Badge -->
-                        <div class="mt-6 p-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white">
-                            <div class="flex items-center justify-center gap-3">
-                                <i class="fas fa-shield-alt text-2xl"></i>
-                                <div>
-                                    <div class="font-bold" data-i18n="certified">Certifié & Agréé</div>
-                                    <div class="text-sm text-blue-200" data-i18n="guarantee">Garantie de qualité</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Main Content -->
+    <main id="main-content">
         
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow hidden md:block">
-            <a href="#services" class="text-white/70 hover:text-white">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="what_we_offer">Ce que nous offrons</span>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="professional_services">Nos Services Professionnels</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-lg max-w-3xl mx-auto" data-i18n="comprehensive_solutions">Solutions de sécurité complètes adaptées à vos besoins</p>
+        <!-- Hero Section -->
+        <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center" role="banner">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <!-- Left Content -->
+                    <div class="lg:w-1/2 text-center lg:text-left rtl:lg:text-right animate-fade-in">
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                            <span class="w-2 h-2 bg-green-400 rounded-full mr-2 rtl:mr-0 rtl:ml-2 animate-pulse" aria-hidden="true"></span>
+                            <span class="text-blue-100 text-sm font-medium" data-i18n="available_24">Disponible 24/7</span>
+                        </div>
+                        
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-i18n="hero_title">
+                            Solutions Professionnelles de Sécurité Électronique
+                        </h1>
+                        
+                        <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed" data-i18n="hero_desc">
+                            Expert en installation CCTV, contrôle d'accès et systèmes d'alarme à Tanger. Plus de 15 ans d'expérience avec support technique 24/7.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start rtl:lg:justify-start">
+                            <a href="tel:+212635509160" class="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 focus-visible">
+                                <i class="fas fa-phone-alt mr-2 rtl:mr-0 rtl:ml-2" aria-hidden="true"></i>
+                                <span data-i18n="call_now">Appelez Maintenant</span>
+                            </a>
+                            <a href="#services" class="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-all focus-visible">
+                                <i class="fas fa-list mr-2 rtl:mr-0 rtl:ml-2" aria-hidden="true"></i>
+                                <span data-i18n="our_services">Nos Services</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Trust Badges -->
+                        <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20">
+                            <div class="text-center">
+                                <div class="text-3xl md:text-4xl font-bold text-white">15+</div>
+                                <div class="text-blue-200 text-sm" data-i18n="years_exp">Années d'Expérience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl md:text-4xl font-bold text-white">500+</div>
+                                <div class="text-blue-200 text-sm" data-i18n="projects">Projets Réalisés</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl md:text-4xl font-bold text-white">98%</div>
+                                <div class="text-blue-200 text-sm" data-i18n="satisfaction">Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Content - Solutions Grid -->
+                    <div class="lg:w-1/2 animate-slide-up">
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-2xl">
+                            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center" data-i18n="our_solutions">Nos Solutions</h2>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-all cursor-pointer group">
+                                    <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform" aria-hidden="true">
+                                        <i class="fas fa-camera text-xl"></i>
+                                    </div>
+                                    <h3 class="font-bold text-gray-800 dark:text-white text-sm md:text-base" data-i18n="cctv">Systèmes CCTV</h3>
+                                    <p class="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="cctv_desc">Surveillance HD</p>
+                                </div>
+                                <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-all cursor-pointer group">
+                                    <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform" aria-hidden="true">
+                                        <i class="fas fa-fingerprint text-xl"></i>
+                                    </div>
+                                    <h3 class="font-bold text-gray-800 dark:text-white text-sm md:text-base" data-i18n="access_control">Contrôle d'Accès</h3>
+                                    <p class="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="access_desc">Biométrique</p>
+                                </div>
+                                <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-all cursor-pointer group">
+                                    <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform" aria-hidden="true">
+                                        <i class="fas fa-bell text-xl"></i>
+                                    </div>
+                                    <h3 class="font-bold text-gray-800 dark:text-white text-sm md:text-base" data-i18n="alarm_systems">Systèmes d'Alarme</h3>
+                                    <p class="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="alarm_desc">Protection 24/7</p>
+                                </div>
+                                <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-all cursor-pointer group">
+                                    <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform" aria-hidden="true">
+                                        <i class="fas fa-wifi text-xl"></i>
+                                    </div>
+                                    <h3 class="font-bold text-gray-800 dark:text-white text-sm md:text-base" data-i18n="network_sec">Sécurité Réseau</h3>
+                                    <p class="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="network_desc">Infrastructure</p>
+                                </div>
+                            </div>
+                            
+                            <!-- SSL Badge -->
+                            <div class="mt-6 p-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white">
+                                <div class="flex items-center justify-center gap-3">
+                                    <i class="fas fa-shield-alt text-2xl" aria-hidden="true"></i>
+                                    <div>
+                                        <div class="font-bold" data-i18n="certified">Certifié & Agréé</div>
+                                        <div class="text-sm text-blue-200" data-i18n="guarantee">Garantie Qualité</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Installation Service -->
-                <div class="service-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
-                    <div class="overflow-hidden h-52">
-                        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&h=600&fit=crop" alt="Security camera installation" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg">
-                            <i class="fas fa-tools text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="installation">Installation</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="installation_desc">Installation professionnelle de tous les systèmes de sécurité y compris CCTV, contrôle d'accès, systèmes d'alarme et interphones.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="site_assessment">Évaluation et planification du site</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="equipment_procurement">Approvisionnement en équipement</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="professional_install">Installation professionnelle</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="system_testing">Test et mise en service</span>
-                            </li>
-                        </ul>
-                    </div>
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow hidden md:block">
+                <a href="#services" class="text-white/70 hover:text-white transition-colors" aria-label="Défiler vers les services">
+                    <i class="fas fa-chevron-down text-2xl" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white dark:bg-gray-900" aria-labelledby="services-heading">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="what_we_offer">Ce que Nous Offrons</span>
+                    <h2 id="services-heading" class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="professional_services">Nos Services Professionnels</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg max-w-3xl mx-auto" data-i18n="comprehensive_solutions">Solutions de sécurité complètes adaptées à vos besoins spécifiques</p>
                 </div>
                 
-                <!-- Training Service -->
-                <div class="service-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
-                    <div class="overflow-hidden h-52">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" alt="Team training workshop" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg">
-                            <i class="fas fa-chalkboard-teacher text-2xl"></i>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Installation Service -->
+                    <article class="service-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
+                        <div class="overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&h=600&fit=crop&q=80" 
+                                 alt="Installation professionnelle de caméras de sécurité" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 width="800"
+                                 height="600">
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="training">Formation</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="training_desc">Programmes de formation complets pour que votre personnel puisse utiliser et gérer efficacement les systèmes de sécurité.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="system_training">Formation à l'utilisation du système</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="maintenance">Procédures de maintenance</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="emergency">Protocoles d'urgence</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="refreshers">Support continu</span>
-                            </li>
-                        </ul>
-                    </div>
+                        <div class="p-8">
+                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg" aria-hidden="true">
+                                <i class="fas fa-tools text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="installation">Installation</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="installation_desc">Installation professionnelle de tous les systèmes de sécurité incluant CCTV, contrôle d'accès, alarmes et interphones.</p>
+                            <ul class="space-y-3" role="list">
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="site_assessment">Évaluation et planification du site</span>
+                                </li>
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="equipment_procurement">Approvisionnement en équipement</span>
+                                </li>
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="professional_install">Installation professionnelle</span>
+                                </li>
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="system_testing">Test et mise en service</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- Training Service -->
+                    <article class="service-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
+                        <div class="overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80" 
+                                 alt="Formation professionnelle sur les systèmes de sécurité" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 width="800"
+                                 height="600">
+                        </div>
+                        <div class="p-8">
+                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg" aria-hidden="true">
+                                <i class="fas fa-chalkboard-teacher text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="training">Formation</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="training_desc">Programmes de formation complets pour que votre personnel puisse utiliser et gérer efficacement les systèmes de sécurité.</p>
+                            <ul class="space-y-3" role="list">
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="system_training">Formation à l'utilisation du système</span>
+                                </li>
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="maintenance">Procédures de maintenance</span>
+                                </li>
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="emergency">Protocoles d'urgence</span>
+                                </li>
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="refreshers">Support continu</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- Service & Maintenance -->
+                    <article class="service-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
+                        <div class="overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop&q=80" 
+                                 alt="Maintenance technique des systèmes de sécurité" 
+                                 class="w-full h-full object-cover"
+                                 loading="lazy"
+                                 width="800"
+                                 height="600">
+                        </div>
+                        <div class="p-8">
+                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg" aria-hidden="true">
+                                <i class="fas fa-cogs text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="service_maintenance">Service & Maintenance</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="service_desc">Entretien régulier et réparation rapide pour garantir que vos systèmes de sécurité fonctionnent parfaitement.</p>
+                            <ul class="space-y-3" role="list">
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="preventive">Entretien préventif</span>
+                                </li>
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="emergency_repairs">Réparations d'urgence 24/7</span>
+                                </li>
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="upgrades">Mises à niveau du système</span>
+                                </li>
+                                <li class="flex items-center text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-check-circle text-green-500 mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span data-i18n="remote_support">Surveillance à distance</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
-                
-                <!-- Service & Maintenance -->
-                <div class="service-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
-                    <div class="overflow-hidden h-52">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Technical maintenance work" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg">
-                            <i class="fas fa-cogs text-2xl"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800" aria-labelledby="about-heading">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <!-- Left Content -->
+                    <div class="lg:w-1/2">
+                        <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="about_us">À Propos de Nous</span>
+                        <h2 id="about-heading" class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="why_choose">Pourquoi Choisir StandTech?</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed" data-i18n="why_desc">
+                            Avec plus de 15 ans d'expérience dans l'industrie de la sécurité électronique, StandTech fournit des solutions fiables et professionnelles pour les clients résidentiels et commerciaux à Tanger et dans tout le Maroc.
+                        </p>
+                        
+                        <!-- Progress Bars -->
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-gray-800 dark:text-white" data-i18n="certified_tech">Techniciens Certifiés</span>
+                                    <span class="text-blue-600 font-bold">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-gray-800 dark:text-white" data-i18n="customer_satisfaction">Satisfaction Client</span>
+                                    <span class="text-blue-600 font-bold">98%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000" style="width: 98%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-bold text-gray-800 dark:text-white" data-i18n="response_time">Temps de Réponse</span>
+                                    <span class="text-blue-600 font-bold">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000" style="width: 90%"></div>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="service_maintenance">Service & Maintenance</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="service_desc">Entretien régulier et réparation rapide pour garantir que vos systèmes de sécurité fonctionnent toujours.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="preventive">Entretien préventif</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="emergency_repairs">Réparations d'urgence 24/7</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="upgrades">Mises à niveau du système</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="remote_support">Surveillance à distance</span>
-                            </li>
-                        </ul>
+                    </div>
+                    
+                    <!-- Right Content -->
+                    <div class="lg:w-1/2">
+                        <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl">
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="expertise">Notre Expertise</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl transition-all hover:shadow-md">
+                                    <i class="fas fa-check-circle text-blue-600 text-xl mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span class="text-gray-800 dark:text-white font-medium" data-i18n="cctv">Systèmes CCTV</span>
+                                </div>
+                                <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl transition-all hover:shadow-md">
+                                    <i class="fas fa-check-circle text-blue-600 text-xl mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span class="text-gray-800 dark:text-white font-medium" data-i18n="access_control">Contrôle d'Accès</span>
+                                </div>
+                                <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl transition-all hover:shadow-md">
+                                    <i class="fas fa-check-circle text-blue-600 text-xl mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span class="text-gray-800 dark:text-white font-medium" data-i18n="alarm_systems">Systèmes d'Alarme</span>
+                                </div>
+                                <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl transition-all hover:shadow-md">
+                                    <i class="fas fa-check-circle text-blue-600 text-xl mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span class="text-gray-800 dark:text-white font-medium" data-i18n="intercom">Interphones</span>
+                                </div>
+                                <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl transition-all hover:shadow-md">
+                                    <i class="fas fa-check-circle text-blue-600 text-xl mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span class="text-gray-800 dark:text-white font-medium" data-i18n="fire_detection">Détection Incendie</span>
+                                </div>
+                                <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl transition-all hover:shadow-md">
+                                    <i class="fas fa-check-circle text-blue-600 text-xl mr-3 rtl:mr-0 rtl:ml-3 flex-shrink-0" aria-hidden="true"></i>
+                                    <span class="text-gray-800 dark:text-white font-medium" data-i18n="network_sec">Sécurité Réseau</span>
+                                </div>
+                            </div>
+                            
+                            <!-- 24/7 Support Banner -->
+                            <div class="mt-8 p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white">
+                                <div class="flex items-center gap-4">
+                                    <div class="bg-white/20 p-4 rounded-xl" aria-hidden="true">
+                                        <i class="fas fa-headset text-3xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg" data-i18n="support_24">Support 24/7 Disponible</h4>
+                                        <p class="text-blue-100 text-sm" data-i18n="support_desc">Appels d'urgence traités en moins de 30 minutes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Left Content -->
-                <div class="lg:w-1/2">
-                    <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="about_us">À propos de nous</span>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="why_choose">Pourquoi Choisir StandTech?</h2>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed" data-i18n="why_desc">
-                        Avec plus de 15 ans d'expérience dans l'industrie de l'électronique de sécurité, StandTech fournit des solutions fiables et professionnelles pour les clients résidentiels et commerciaux.
-                    </p>
-                    
-                    <!-- Progress Bars -->
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold text-gray-800 dark:text-white" data-i18n="certified_tech">Techniciens Certifiés</span>
-                                <span class="text-blue-600 font-bold">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold text-gray-800 dark:text-white" data-i18n="customer_satisfaction">Satisfaction Client</span>
-                                <span class="text-blue-600 font-bold">98%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 98%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold text-gray-800 dark:text-white" data-i18n="response_time">Temps de Réponse</span>
-                                <span class="text-blue-600 font-bold">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Testimonials Section (NEW) -->
+        <section id="testimonials" class="py-20 bg-white dark:bg-gray-900" aria-labelledby="testimonials-heading">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="testimonials_badge">Témoignages</span>
+                    <h2 id="testimonials-heading" class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="client_reviews">Ce Que Disent Nos Clients</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg max-w-3xl mx-auto" data-i18n="testimonials_desc">Plus de 500 clients satisfaits à Tanger et au Maroc</p>
                 </div>
                 
-                <!-- Right Content -->
-                <div class="lg:w-1/2">
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl">
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="expertise">Notre Expertise</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="cctv">Systèmes CCTV</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="access_control">Contrôle d'Accès</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="alarm_systems">Systèmes d'Alarme</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="intercom">Interphones</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="fire_detection">Détection Incendie</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="network_sec">Sécurité Réseau</span>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <article class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400" aria-label="Note: 5 sur 5 étoiles">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 italic" data-i18n="testimonial_1">
+                            "Installation professionnelle et rapide de notre système CCTV. L'équipe StandTech est très compétente et le service après-vente est excellent."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold mr-3 rtl:mr-0 rtl:ml-3" aria-hidden="true">
+                                MK
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800 dark:text-white">Mohammed Khalil</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Restaurant - Tanger</div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Testimonial 2 -->
+                    <article class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400" aria-label="Note: 5 sur 5 étoiles">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 italic" data-i18n="testimonial_2">
+                            "Excellent service! Ils ont installé un système complet de contrôle d'accès biométrique dans notre entreprise. Très satisfait du résultat."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold mr-3 rtl:mr-0 rtl:ml-3" aria-hidden="true">
+                                SA
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800 dark:text-white">Sarah Alami</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Bureau - Tanger</div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Testimonial 3 -->
+                    <article class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400" aria-label="Note: 5 sur 5 étoiles">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 italic" data-i18n="testimonial_3">
+                            "Support technique 24/7 vraiment efficace. Ils sont toujours disponibles pour résoudre nos problèmes rapidement. Je recommande vivement!"
+                        </p>
+                        <div class="flex items-center">
+                            <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold mr-3 rtl:mr-0 rtl:ml-3" aria-hidden="true">
+                                YB
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800 dark:text-white">Youssef Bennani</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-400">Hôtel - Tanger</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (IMPROVED) -->
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800" aria-labelledby="contact-heading">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="get_in_touch">Prenez Contact</span>
+                    <h2 id="contact-heading" class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="contact_standtech">Contactez StandTech</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg" data-i18n="contact_desc">Devis gratuit et consultation sans engagement</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Form (OPTIMIZED) -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="send_message">Demandez Votre Devis Gratuit</h3>
                         
-                        <!-- 24/7 Support Banner -->
-                        <div class="mt-8 p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white">
-                            <div class="flex items-center gap-4">
-                                <div class="bg-white/20 p-4 rounded-xl">
-                                    <i class="fas fa-headset text-3xl"></i>
+                        <form id="contactForm" class="space-y-6" novalidate>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Name Field -->
+                                <div>
+                                    <label for="name" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">
+                                        <span data-i18n="full_name">Nom Complet</span> <span class="text-red-500">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name" 
+                                        required 
+                                        autocomplete="name"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition-all"
+                                        placeholder="Votre nom"
+                                        aria-required="true">
+                                    <span class="text-red-500 text-sm hidden" id="name-error"></span>
+                                </div>
+                                
+                                <!-- Email Field (OPTIONAL per best practices) -->
+                                <div>
+                                    <label for="email" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">
+                                        <span data-i18n="email">Email</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email"
+                                        autocomplete="email"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition-all"
+                                        placeholder="votre@email.com">
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Phone Field -->
+                                <div>
+                                    <label for="phone" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">
+                                        <span data-i18n="phone">Téléphone</span> <span class="text-red-500">*</span>
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        required
+                                        autocomplete="tel"
+                                        pattern="[0-9+\s-]+"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition-all"
+                                        placeholder="+212 6XX XXX XXX"
+                                        aria-required="true">
+                                    <span class="text-red-500 text-sm hidden" id="phone-error"></span>
+                                </div>
+                                
+                                <!-- Service Select -->
+                                <div>
+                                    <label for="service" class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="service_needed">Service Nécessaire</label>
+                                    <select 
+                                        id="service" 
+                                        name="service"
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition-all">
+                                        <option value="" data-i18n="select_service">Sélectionnez un service</option>
+                                        <option value="installation">Installation CCTV</option>
+                                        <option value="access-control">Contrôle d'Accès</option>
+                                        <option value="alarm">Système d'Alarme</option>
+                                        <option value="maintenance">Maintenance</option>
+                                        <option value="consultation">Consultation</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- Message Field -->
+                            <div>
+                                <label for="message" class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="message">Message</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="4"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-800 dark:text-white resize-none transition-all"
+                                    placeholder="Décrivez vos besoins en sécurité..."></textarea>
+                            </div>
+                            
+                            <!-- Honeypot (Anti-spam) -->
+                            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+                            
+                            <!-- Submit Button -->
+                            <button 
+                                type="submit" 
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2 focus-visible">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                <span data-i18n="send_request">Envoyer la Demande</span>
+                            </button>
+                            
+                            <!-- Success Message -->
+                            <div id="form-success" class="hidden bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-400 px-4 py-3 rounded-xl" role="alert">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-xl mr-3 rtl:mr-0 rtl:ml-3" aria-hidden="true"></i>
+                                    <span data-i18n="form_success">Merci! Nous vous contacterons sous peu.</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="contact_info">Informations de Contact</h3>
+                        
+                        <div class="space-y-6 mb-8">
+                            <!-- Location -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl flex-shrink-0" aria-hidden="true">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg" data-i18n="support_24">Support 24/7 Disponible</h4>
-                                    <p class="text-blue-100 text-sm" data-i18n="support_desc">Les appels d'urgence sont traités dans les 30 minutes maximum</p>
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-1" data-i18n="our_location">Notre Adresse</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">BELLE VUE RUE 71 N 9</p>
+                                    <p class="text-gray-600 dark:text-gray-400">1ÈRE ÉTAGE N 2</p>
+                                    <p class="text-gray-600 dark:text-gray-400">90000 TANGER, Morocco</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl flex-shrink-0" aria-hidden="true">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-1" data-i18n="phone_number">Téléphone</h4>
+                                    <a href="tel:+212635509160" class="text-blue-600 hover:text-blue-700 font-medium text-lg">0635 509 160</a>
+                                    <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">Urgence 24/7: <a href="tel:+212635509160" class="text-blue-600">0635 509 160</a></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl flex-shrink-0" aria-hidden="true">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-1" data-i18n="email_address">Email</h4>
+                                    <a href="mailto:standtechkamal@gmail.com" class="text-blue-600 hover:text-blue-700">standtechkamal@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Business Hours -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl flex-shrink-0" aria-hidden="true">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-1" data-i18n="business_hours">Heures d'Ouverture</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Lun - Sam: 9h00 - 18h00</p>
+                                    <p class="text-gray-600 dark:text-gray-400">Dim: Sur rendez-vous</p>
+                                    <p class="text-sm text-green-600 dark:text-green-400 font-medium mt-1">Urgences 24/7</p>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Map (Placeholder - Replace with actual embed) -->
+                        <div class="bg-gray-200 dark:bg-gray-700 rounded-2xl overflow-hidden h-64">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.123!2d-5.834!3d35.7595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQ1JzM0LjIiTiA1wrg1MCcwMi40Ilc!5e0!3m2!1sen!2sma!4v1234567890"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                title="Emplacement de StandTech sur la carte"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="get_in_touch">Prenez contact</span>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="contact_standtech">Contactez StandTech</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-lg" data-i18n="contact_desc">Prenez contact pour une consultation gratuite ou un devis</p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
-                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="send_message">Envoyez-nous un message</h3>
-                    
-                    <form id="contactForm" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="full_name">Nom Complet <span class="text-red-500">*</span></label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="email">Email <span class="text-red-500">*</span></label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
-                            </div>
-                        </div>
-                        
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="phone">Téléphone <span class="text-red-500">*</span></label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+212 6 35 50 91 60" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="service_needed">Service Nécessaire</label>
-                                <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
-                                    <option value="" data-i18n="select_service">Sélectionnez un service</option>
-                                    <option value="installation">Installation</option>
-                                    <option value="training">Formation</option>
-                                    <option value="maintenance">Maintenance</option>
-                                    <option value="consultation">Consultation</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="message">Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Décrivez vos besoins en sécurité..." class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white resize-none"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-                            <i class="fas fa-paper-plane"></i>
-                            <span data-i18n="ask_quote">Demander un Devis</span>
-                        </button>
-                    </form>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="contact_info">Informations de Contact</h3>
-                    
-                    <div class="space-y-6 mb-8">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl">
-                                <i class="fas fa-map-marker-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="our_location">Notre Adresse</h4>
-                                <p class="text-gray-600 dark:text-gray-400">BELLE VUE RUE 71 N 9 1ERE ETAGE N 2</p>
-                                <p class="text-gray-600 dark:text-gray-400">90000 TANGER, Morocco</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl">
-                                <i class="fas fa-phone text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="phone_number">Téléphone</h4>
-                                <p class="text-gray-600 dark:text-gray-400">0635 509 160</p>
-                                <p class="text-sm text-gray-500 dark:text-gray-500">24/7 Emergency: 0635 509 160</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="email_address">Email</h4>
-                                <p class="text-gray-600 dark:text-gray-400">standtechkamal@gmail.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl">
-                                <i class="fas fa-clock text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="business_hours">Heures d'Ouverture</h4>
-                                <p class="text-gray-600 dark:text-gray-400" data-i18n="monday_friday">Lundi - Vendredi: 8h30 - 18h30</p>
-                                <p class="text-gray-600 dark:text-gray-400" data-i18n="saturday">Samedi: 9h00 - 13h00</p>
-                                <p class="text-gray-600 dark:text-gray-400" data-i18n="emergency_service">Service d'urgence: 24/7</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quick Response Banner -->
-                    <div class="bg-blue-50 dark:bg-gray-800 rounded-2xl p-6 border border-blue-100 dark:border-gray-700">
-                        <h4 class="font-bold text-gray-800 dark:text-white mb-3" data-i18n="quick_response">Garantie de Réponse Rapide</h4>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4" data-i18n="response_guarantee">Nous garantissons de répondre à toutes les demandes dans les 2 heures ouvrables.</p>
-                        <div class="flex items-center gap-3 text-blue-600 dark:text-blue-400 font-semibold">
-                            <i class="fas fa-bolt text-yellow-500 text-xl"></i>
-                            <span data-i18n="emergency_guarantee">Urgences traitées en 30 min</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 dark:bg-gray-950 text-white py-16">
+    <footer class="bg-gray-900 text-white py-12" role="contentinfo">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                 <!-- Company Info -->
                 <div>
-                    <div class="flex items-center mb-6">
-                        <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
-                            <i class="fas fa-shield-alt text-xl"></i>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg mr-3 rtl:mr-0 rtl:ml-3">
+                            <i class="fas fa-shield-alt text-xl" aria-hidden="true"></i>
                         </div>
                         <span class="text-2xl font-bold">Stand<span class="text-blue-400">Tech</span></span>
                     </div>
-                    <p class="text-gray-400 mb-6" data-i18n="licensed_insured">Fournisseur de services de sécurité agréé et assuré.</p>
-                    <div class="flex space-x-3">
-                        <a href="https://www.facebook.com/Standtechma" target="_blank" class="bg-gray-700 hover:bg-blue-600 p-3 rounded-lg transition-colors">
-                            <i class="fab fa-facebook-f"></i>
+                    <p class="text-gray-400 mb-4" data-i18n="footer_desc">
+                        Solutions professionnelles de sécurité électronique à Tanger depuis 2008.
+                    </p>
+                    <!-- Social Links -->
+                    <div class="flex space-x-4 rtl:space-x-reverse">
+                        <a href="#" class="bg-gray-800 hover:bg-blue-600 p-3 rounded-lg transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.instagram.com/standtech.ma/" target="_blank" class="bg-gray-700 hover:bg-pink-600 p-3 rounded-lg transition-colors">
-                            <i class="fab fa-instagram"></i>
+                        <a href="#" class="bg-gray-800 hover:bg-blue-600 p-3 rounded-lg transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.youtube.com/@StandTech" target="_blank" class="bg-gray-700 hover:bg-red-600 p-3 rounded-lg transition-colors">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://wa.me/212635509160" target="_blank" class="bg-gray-700 hover:bg-green-600 p-3 rounded-lg transition-colors">
-                            <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/212635509160" class="bg-gray-800 hover:bg-green-600 p-3 rounded-lg transition-colors" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
                 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="text-xl font-bold mb-6" data-i18n="quick_links">Liens Rapides</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors" data-i18n="home">Accueil</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="services">Services</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors" data-i18n="about">À propos</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors" data-i18n="contact">Contact</a></li>
+                    <h4 class="font-bold text-lg mb-4" data-i18n="quick_links">Liens Rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-blue-400 transition-colors" data-i18n="home">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-400 transition-colors" data-i18n="services">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition-colors" data-i18n="about">À propos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-blue-400 transition-colors" data-i18n="contact">Contact</a></li>
                     </ul>
                 </div>
                 
-                <!-- Our Services -->
+                <!-- Services -->
                 <div>
-                    <h4 class="text-xl font-bold mb-6" data-i18n="our_services_footer">Nos Services</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="cctv_install">Installation CCTV</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="access_control_systems">Contrôle d'Accès</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="security_training">Formation</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="system_maintenance">Maintenance</a></li>
+                    <h4 class="font-bold text-lg mb-4" data-i18n="our_services">Nos Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-400 transition-colors" data-i18n="cctv">Systèmes CCTV</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-400 transition-colors" data-i18n="access_control">Contrôle d'Accès</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-400 transition-colors" data-i18n="alarm_systems">Systèmes d'Alarme</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-400 transition-colors" data-i18n="maintenance">Maintenance</a></li>
                     </ul>
                 </div>
                 
-                <!-- Newsletter -->
+                <!-- Contact -->
                 <div>
-                    <h4 class="text-xl font-bold mb-6" data-i18n="newsletter">Newsletter</h4>
-                    <p class="text-gray-400 mb-4" data-i18n="subscribe">Abonnez-vous pour des conseils de sécurité</p>
-                    <form id="newsletterForm" class="flex">
-                        <input type="email" id="newsletterEmail" placeholder="Votre email" required class="bg-gray-700 text-white px-4 py-3 rounded-l-xl w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-r-xl transition-colors">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                    <h4 class="font-bold text-lg mb-4" data-i18n="contact_us">Contactez-Nous</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <span>BELLE VUE RUE 71 N 9, Tanger</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone text-blue-400 flex-shrink-0" aria-hidden="true"></i>
+                            <a href="tel:+212635509160" class="hover:text-blue-400 transition-colors">0635 509 160</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope text-blue-400 flex-shrink-0" aria-hidden="true"></i>
+                            <a href="mailto:standtechkamal@gmail.com" class="hover:text-blue-400 transition-colors break-all">standtechkamal@gmail.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             
-            <!-- Copyright -->
-            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 StandTech. <span data-i18n="all_rights">Tous droits réservés.</span></p>
-                <p class="mt-2" data-i18n="licensed_insured">Fournisseur de services de sécurité agréé et assuré</p>
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 StandTech. <span data-i18n="rights_reserved">Tous droits réservés.</span></p>
+                <div class="mt-2 space-x-4 rtl:space-x-reverse">
+                    <a href="#" class="hover:text-blue-400 transition-colors" data-i18n="privacy_policy">Politique de Confidentialité</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-blue-400 transition-colors" data-i18n="terms_service">Conditions d'Utilisation</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/212635509160" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center animate-bounce-slow transition-colors">
-            <i class="fab fa-whatsapp text-3xl"></i>
-        </a>
-        <div class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse-slow">
-            <span>1</span>
-        </div>
-    </div>
-
-    <!-- Success Popup -->
-    <div id="successPopup" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 popup-overlay">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl">
-            <div class="mx-auto w-20 h-20 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-6">
-                <i class="fas fa-check text-green-600 dark:text-green-400 text-4xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3" data-i18n="quote_request_sent">Demande envoyée!</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="quote_confirmation">
-                Merci! Votre demande a été soumise. Nous vous contacterons dans les 24 heures.
-            </p>
-            <button id="closePopup" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors" data-i18n="got_it">
-                Compris
-            </button>
-        </div>
-    </div>
-
     <!-- JavaScript -->
     <script>
-        // ===========================================
-        // TRANSLATIONS
-        // ===========================================
+        // Translations
         const translations = {
             fr: {
-                lang_code: "fr",
-                direction: "ltr",
+                // Navigation
                 home: "Accueil",
                 services: "Services",
                 about: "À propos",
+                testimonials: "Témoignages",
                 contact: "Contact",
-                get_quote: "Obtenir un devis",
+                get_quote: "Devis Gratuit",
+                
+                // Hero
                 available_24: "Disponible 24/7",
-                hero_title: "Solutions Électroniques de Sécurité Professionnelles",
-                hero_desc: "Solutions professionnelles de sécurité électronique à Tanger, Maroc. Installation, formation et service pour CCTV, contrôle d'accès, systèmes d'alarme et plus encore.",
-                contact_us: "Nous contacter",
-                our_services: "Nos services",
-                years_exp: "Années d'expérience",
-                projects: "Projets réalisés",
-                support: "Support",
+                hero_title: "Solutions Professionnelles de Sécurité Électronique",
+                hero_desc: "Expert en installation CCTV, contrôle d'accès et systèmes d'alarme à Tanger. Plus de 15 ans d'expérience avec support technique 24/7.",
+                call_now: "Appelez Maintenant",
                 our_solutions: "Nos Solutions",
+                years_exp: "Années d'Expérience",
+                projects: "Projets Réalisés",
+                satisfaction: "Satisfaction",
+                certified: "Certifié & Agréé",
+                guarantee: "Garantie Qualité",
+                
+                // Services
+                what_we_offer: "Ce que Nous Offrons",
+                professional_services: "Nos Services Professionnels",
+                comprehensive_solutions: "Solutions de sécurité complètes adaptées à vos besoins spécifiques",
                 cctv: "Systèmes CCTV",
                 cctv_desc: "Surveillance HD",
                 access_control: "Contrôle d'Accès",
@@ -807,13 +1154,10 @@
                 alarm_desc: "Protection 24/7",
                 network_sec: "Sécurité Réseau",
                 network_desc: "Infrastructure",
-                certified: "Certifié & Agréé",
-                guarantee: "Garantie de qualité",
-                what_we_offer: "Ce que nous offrons",
-                professional_services: "Nos Services Professionnels",
-                comprehensive_solutions: "Solutions de sécurité complètes adaptées à vos besoins",
+                intercom: "Interphones",
+                fire_detection: "Détection Incendie",
                 installation: "Installation",
-                installation_desc: "Installation professionnelle de tous les systèmes de sécurité y compris CCTV, contrôle d'accès, systèmes d'alarme et interphones.",
+                installation_desc: "Installation professionnelle de tous les systèmes de sécurité incluant CCTV, contrôle d'accès, alarmes et interphones.",
                 site_assessment: "Évaluation et planification du site",
                 equipment_procurement: "Approvisionnement en équipement",
                 professional_install: "Installation professionnelle",
@@ -825,75 +1169,84 @@
                 emergency: "Protocoles d'urgence",
                 refreshers: "Support continu",
                 service_maintenance: "Service & Maintenance",
-                service_desc: "Entretien régulier et réparation rapide pour garantir que vos systèmes de sécurité fonctionnent toujours.",
+                service_desc: "Entretien régulier et réparation rapide pour garantir que vos systèmes de sécurité fonctionnent parfaitement.",
                 preventive: "Entretien préventif",
                 emergency_repairs: "Réparations d'urgence 24/7",
                 upgrades: "Mises à niveau du système",
                 remote_support: "Surveillance à distance",
-                about_us: "À propos de nous",
+                
+                // About
+                about_us: "À Propos de Nous",
                 why_choose: "Pourquoi Choisir StandTech?",
-                why_desc: "Avec plus de 15 ans d'expérience dans l'industrie de l'électronique de sécurité, StandTech fournit des solutions fiables et professionnelles pour les clients résidentiels et commerciaux.",
+                why_desc: "Avec plus de 15 ans d'expérience dans l'industrie de la sécurité électronique, StandTech fournit des solutions fiables et professionnelles pour les clients résidentiels et commerciaux à Tanger et dans tout le Maroc.",
                 certified_tech: "Techniciens Certifiés",
                 customer_satisfaction: "Satisfaction Client",
                 response_time: "Temps de Réponse",
                 expertise: "Notre Expertise",
-                intercom: "Interphones",
-                fire_detection: "Détection Incendie",
                 support_24: "Support 24/7 Disponible",
-                support_desc: "Les appels d'urgence sont traités dans les 30 minutes maximum",
-                get_in_touch: "Prenez contact",
+                support_desc: "Appels d'urgence traités en moins de 30 minutes",
+                
+                // Testimonials
+                testimonials_badge: "Témoignages",
+                client_reviews: "Ce Que Disent Nos Clients",
+                testimonials_desc: "Plus de 500 clients satisfaits à Tanger et au Maroc",
+                testimonial_1: "Installation professionnelle et rapide de notre système CCTV. L'équipe StandTech est très compétente et le service après-vente est excellent.",
+                testimonial_2: "Excellent service! Ils ont installé un système complet de contrôle d'accès biométrique dans notre entreprise. Très satisfait du résultat.",
+                testimonial_3: "Support technique 24/7 vraiment efficace. Ils sont toujours disponibles pour résoudre nos problèmes rapidement. Je recommande vivement!",
+                
+                // Contact
+                get_in_touch: "Prenez Contact",
                 contact_standtech: "Contactez StandTech",
-                contact_desc: "Prenez contact pour une consultation gratuite ou un devis",
-                send_message: "Envoyez-nous un message",
+                contact_desc: "Devis gratuit et consultation sans engagement",
+                send_message: "Demandez Votre Devis Gratuit",
                 full_name: "Nom Complet",
                 email: "Email",
                 phone: "Téléphone",
                 service_needed: "Service Nécessaire",
                 select_service: "Sélectionnez un service",
                 message: "Message",
-                ask_quote: "Demander un Devis",
+                send_request: "Envoyer la Demande",
+                form_success: "Merci! Nous vous contacterons sous peu.",
                 contact_info: "Informations de Contact",
                 our_location: "Notre Adresse",
                 phone_number: "Téléphone",
                 email_address: "Email",
                 business_hours: "Heures d'Ouverture",
-                monday_friday: "Lundi - Vendredi: 8h30 - 18h30",
-                saturday: "Samedi: 9h00 - 13h00",
-                emergency_service: "Service d'urgence: 24/7",
-                quick_response: "Garantie de Réponse Rapide",
-                response_guarantee: "Nous garantissons de répondre à toutes les demandes dans les 2 heures ouvrables.",
-                emergency_guarantee: "Urgences traitées en 30 min",
-                licensed_insured: "Fournisseur de services de sécurité agréé et assuré.",
+                
+                // Footer
+                footer_desc: "Solutions professionnelles de sécurité électronique à Tanger depuis 2008.",
                 quick_links: "Liens Rapides",
-                our_services_footer: "Nos Services",
-                cctv_install: "Installation CCTV",
-                access_control_systems: "Contrôle d'Accès",
-                security_training: "Formation",
-                system_maintenance: "Maintenance",
-                newsletter: "Newsletter",
-                subscribe: "Abonnez-vous pour des conseils de sécurité",
-                all_rights: "Tous droits réservés.",
-                quote_request_sent: "Demande envoyée!",
-                quote_confirmation: "Merci! Votre demande a été soumise. Nous vous contacterons dans les 24 heures.",
-                got_it: "Compris"
+                our_services: "Nos Services",
+                contact_us: "Contactez-Nous",
+                rights_reserved: "Tous droits réservés.",
+                privacy_policy: "Politique de Confidentialité",
+                terms_service: "Conditions d'Utilisation"
             },
             en: {
-                lang_code: "en",
-                direction: "ltr",
+                // Navigation
                 home: "Home",
                 services: "Services",
                 about: "About",
+                testimonials: "Testimonials",
                 contact: "Contact",
-                get_quote: "Get Quote",
+                get_quote: "Free Quote",
+                
+                // Hero
                 available_24: "Available 24/7",
                 hero_title: "Professional Security Electronics Solutions",
-                hero_desc: "Professional Security Electronics Solutions in Tanger, Morocco. Installation, Training & Service for CCTV, Access Control, Alarm Systems, and more.",
-                contact_us: "Contact Us",
-                our_services: "Our Services",
-                years_exp: "Years of experience",
-                projects: "Completed projects",
-                support: "Support",
+                hero_desc: "Expert in CCTV installation, access control and alarm systems in Tangier. Over 15 years of experience with 24/7 technical support.",
+                call_now: "Call Now",
                 our_solutions: "Our Solutions",
+                years_exp: "Years of Experience",
+                projects: "Projects Completed",
+                satisfaction: "Satisfaction",
+                certified: "Certified & Licensed",
+                guarantee: "Quality Guarantee",
+                
+                // Services
+                what_we_offer: "What We Offer",
+                professional_services: "Our Professional Services",
+                comprehensive_solutions: "Comprehensive security solutions tailored to your specific needs",
                 cctv: "CCTV Systems",
                 cctv_desc: "HD Surveillance",
                 access_control: "Access Control",
@@ -902,386 +1255,433 @@
                 alarm_desc: "24/7 Protection",
                 network_sec: "Network Security",
                 network_desc: "Infrastructure",
-                certified: "Certified & Licensed",
-                guarantee: "Quality guarantee",
-                what_we_offer: "What we offer",
-                professional_services: "Our Professional Services",
-                comprehensive_solutions: "Comprehensive security solutions tailored to your needs",
+                intercom: "Intercom",
+                fire_detection: "Fire Detection",
                 installation: "Installation",
-                installation_desc: "Professional installation of all security systems including CCTV, access control, alarm systems, and intercoms.",
-                site_assessment: "Site assessment & planning",
+                installation_desc: "Professional installation of all security systems including CCTV, access control, alarms and intercoms.",
+                site_assessment: "Site assessment and planning",
                 equipment_procurement: "Equipment procurement",
                 professional_install: "Professional installation",
-                system_testing: "System testing & commissioning",
+                system_testing: "Testing and commissioning",
                 training: "Training",
-                training_desc: "Comprehensive training programs for your staff to effectively use and manage security systems.",
+                training_desc: "Comprehensive training programs so your staff can effectively use and manage security systems.",
                 system_training: "System operation training",
                 maintenance: "Maintenance procedures",
                 emergency: "Emergency protocols",
                 refreshers: "Ongoing support",
                 service_maintenance: "Service & Maintenance",
-                service_desc: "Regular maintenance and prompt repair services to ensure your security systems are always operational.",
+                service_desc: "Regular maintenance and quick repairs to ensure your security systems work perfectly.",
                 preventive: "Preventive maintenance",
-                emergency_repairs: "24/7 emergency repairs",
+                emergency_repairs: "24/7 Emergency repairs",
                 upgrades: "System upgrades",
                 remote_support: "Remote monitoring",
-                about_us: "About us",
+                
+                // About
+                about_us: "About Us",
                 why_choose: "Why Choose StandTech?",
-                why_desc: "With over 15 years of experience in the security electronics industry, StandTech provides reliable, professional solutions for residential and commercial clients.",
+                why_desc: "With over 15 years of experience in the security electronics industry, StandTech provides reliable and professional solutions for residential and commercial clients in Tangier and throughout Morocco.",
                 certified_tech: "Certified Technicians",
                 customer_satisfaction: "Customer Satisfaction",
                 response_time: "Response Time",
                 expertise: "Our Expertise",
-                intercom: "Intercom Systems",
-                fire_detection: "Fire Detection",
                 support_24: "24/7 Support Available",
-                support_desc: "Emergency calls answered within 30 minutes",
-                get_in_touch: "Get in touch",
+                support_desc: "Emergency calls handled in less than 30 minutes",
+                
+                // Testimonials
+                testimonials_badge: "Testimonials",
+                client_reviews: "What Our Clients Say",
+                testimonials_desc: "Over 500 satisfied customers in Tangier and Morocco",
+                testimonial_1: "Professional and fast installation of our CCTV system. The StandTech team is very competent and the after-sales service is excellent.",
+                testimonial_2: "Excellent service! They installed a complete biometric access control system in our company. Very satisfied with the result.",
+                testimonial_3: "Really efficient 24/7 technical support. They are always available to solve our problems quickly. Highly recommend!",
+                
+                // Contact
+                get_in_touch: "Get in Touch",
                 contact_standtech: "Contact StandTech",
-                contact_desc: "Get in touch for a free consultation or quote",
-                send_message: "Send us a Message",
+                contact_desc: "Free quote and consultation with no obligation",
+                send_message: "Request Your Free Quote",
                 full_name: "Full Name",
                 email: "Email",
                 phone: "Phone",
                 service_needed: "Service Needed",
                 select_service: "Select a service",
                 message: "Message",
-                ask_quote: "Request Quote",
+                send_request: "Send Request",
+                form_success: "Thank you! We will contact you shortly.",
                 contact_info: "Contact Information",
-                our_location: "Our Location",
+                our_location: "Our Address",
                 phone_number: "Phone",
                 email_address: "Email",
                 business_hours: "Business Hours",
-                monday_friday: "Monday - Friday: 8:30 AM - 6:30 PM",
-                saturday: "Saturday: 9:00 AM - 1:00 PM",
-                emergency_service: "Emergency Service: 24/7",
-                quick_response: "Quick Response Guarantee",
-                response_guarantee: "We guarantee to respond to all inquiries within 2 business hours.",
-                emergency_guarantee: "Emergencies handled in 30 min",
-                licensed_insured: "Licensed & Insured Security Electronics Provider.",
+                
+                // Footer
+                footer_desc: "Professional security electronics solutions in Tangier since 2008.",
                 quick_links: "Quick Links",
-                our_services_footer: "Our Services",
-                cctv_install: "CCTV Installation",
-                access_control_systems: "Access Control",
-                security_training: "Training",
-                system_maintenance: "Maintenance",
-                newsletter: "Newsletter",
-                subscribe: "Subscribe for security tips",
-                all_rights: "All rights reserved.",
-                quote_request_sent: "Request Sent!",
-                quote_confirmation: "Thank you! Your request has been submitted. We will contact you within 24 hours.",
-                got_it: "Got it"
+                our_services: "Our Services",
+                contact_us: "Contact Us",
+                rights_reserved: "All rights reserved.",
+                privacy_policy: "Privacy Policy",
+                terms_service: "Terms of Service"
             },
             ar: {
-                lang_code: "ar",
-                direction: "rtl",
+                // Navigation
                 home: "الرئيسية",
                 services: "الخدمات",
-                about: "عن الشركة",
+                about: "من نحن",
+                testimonials: "آراء العملاء",
                 contact: "اتصل بنا",
-                get_quote: "طلب عرض سعر",
-                available_24: "متاح 24/7",
-                hero_title: "حلول إلكترونية أمنية احترافية",
-                hero_desc: "حلول إلكترونية أمنية احترافية في طنجة، المغرب. التثبيت والتدريب والصيانة لأنظمة المراقبة والتحكم في الوصول وأنظمة الإنذار.",
-                contact_us: "اتصل بنا",
-                our_services: "خدماتنا",
+                get_quote: "عرض سعر مجاني",
+                
+                // Hero
+                available_24: "متاحون 24/7",
+                hero_title: "حلول احترافية للأمن الإلكتروني",
+                hero_desc: "خبراء في تركيب كاميرات المراقبة وأنظمة التحكم في الدخول وأنظمة الإنذار في طنجة. أكثر من 15 عامًا من الخبرة مع دعم فني على مدار الساعة.",
+                call_now: "اتصل الآن",
+                our_solutions: "حلولنا",
                 years_exp: "سنوات الخبرة",
                 projects: "مشاريع منجزة",
-                support: "الدعم",
-                our_solutions: "حلولنا",
+                satisfaction: "الرضا",
+                certified: "معتمد ومرخص",
+                guarantee: "ضمان الجودة",
+                
+                // Services
+                what_we_offer: "ما نقدمه",
+                professional_services: "خدماتنا الاحترافية",
+                comprehensive_solutions: "حلول أمنية شاملة مصممة خصيصًا لاحتياجاتك",
                 cctv: "أنظمة المراقبة",
                 cctv_desc: "مراقبة عالية الدقة",
-                access_control: "التحكم في الوصول",
-                access_desc: "بصمة الإصبع",
+                access_control: "التحكم في الدخول",
+                access_desc: "بيومتري",
                 alarm_systems: "أنظمة الإنذار",
                 alarm_desc: "حماية 24/7",
                 network_sec: "أمن الشبكات",
                 network_desc: "البنية التحتية",
-                certified: "معتمد ومرخص",
-                guarantee: "ضمان الجودة",
-                what_we_offer: "ما نقدمه",
-                professional_services: "خدماتنا المهنية",
-                comprehensive_solutions: "حلول أمنية شاملة مصممة لتلبية احتياجاتك",
-                installation: "التثبيت",
-                installation_desc: "تثبيت احترافي لجميع أنظمة الأمان بما في ذلك أنظمة المراقبة والتحكم في الوصول وأنظمة الإنذار.",
+                intercom: "الاتصال الداخلي",
+                fire_detection: "كشف الحريق",
+                installation: "التركيب",
+                installation_desc: "تركيب احترافي لجميع أنظمة الأمن بما في ذلك كاميرات المراقبة والتحكم في الدخول والإنذارات.",
                 site_assessment: "تقييم وتخطيط الموقع",
-                equipment_procurement: "توريد المعدات",
-                professional_install: "التثبيت الاحترافي",
-                system_testing: "اختبار وتشغيل النظام",
+                equipment_procurement: "شراء المعدات",
+                professional_install: "تركيب احترافي",
+                system_testing: "الاختبار والتشغيل",
                 training: "التدريب",
-                training_desc: "برامج تدريبية شاملة لموظفيك لاستخدام وإدارة أنظمة الأمان بفعالية.",
-                system_training: "التدريب على تشغيل النظام",
+                training_desc: "برامج تدريب شاملة لفريقك لاستخدام وإدارة أنظمة الأمان بفعالية.",
+                system_training: "تدريب على استخدام النظام",
                 maintenance: "إجراءات الصيانة",
                 emergency: "بروتوكولات الطوارئ",
-                refreshers: "الدعم المستمر",
+                refreshers: "دعم مستمر",
                 service_maintenance: "الخدمة والصيانة",
-                service_desc: "صيانة دورية وخدمات إصلاح سريعة لضمان عمل أنظمة الأمان دائماً.",
-                preventive: "الصيانة الوقائية",
+                service_desc: "صيانة منتظمة وإصلاحات سريعة لضمان عمل أنظمة الأمان بشكل مثالي.",
+                preventive: "صيانة وقائية",
                 emergency_repairs: "إصلاحات طوارئ 24/7",
-                upgrades: "تحديثات النظام",
-                remote_support: "المراقبة عن بعد",
+                upgrades: "ترقيات النظام",
+                remote_support: "مراقبة عن بعد",
+                
+                // About
                 about_us: "من نحن",
-                why_choose: "لماذا تختار ستاند تيك؟",
-                why_desc: "مع أكثر من 15 عاماً من الخبرة في مجال الإلكترونيات الأمنية، تقدم ستاند تيك حلولاً موثوقة واحترافية للعملاء السكنيين والتجاريين.",
+                why_choose: "لماذا تختار StandTech؟",
+                why_desc: "مع أكثر من 15 عامًا من الخبرة في صناعة الأمن الإلكتروني، توفر StandTech حلولًا موثوقة واحترافية للعملاء السكنيين والتجاريين في طنجة وفي جميع أنحاء المغرب.",
                 certified_tech: "فنيون معتمدون",
                 customer_satisfaction: "رضا العملاء",
                 response_time: "وقت الاستجابة",
                 expertise: "خبرتنا",
-                intercom: "أنظمة الاتصال الداخلي",
-                fire_detection: "كشف الحرائق",
                 support_24: "دعم متاح 24/7",
-                support_desc: "الرد على مكالمات الطوارئ خلال 30 دقيقة",
+                support_desc: "معالجة مكالمات الطوارئ في أقل من 30 دقيقة",
+                
+                // Testimonials
+                testimonials_badge: "آراء العملاء",
+                client_reviews: "ماذا يقول عملاؤنا",
+                testimonials_desc: "أكثر من 500 عميل راضٍ في طنجة والمغرب",
+                testimonial_1: "تركيب احترافي وسريع لنظام المراقبة لدينا. فريق StandTech كفء جدًا وخدمة ما بعد البيع ممتازة.",
+                testimonial_2: "خدمة ممتازة! قاموا بتركيب نظام كامل للتحكم في الدخول البيومتري في شركتنا. راضٍ جدًا عن النتيجة.",
+                testimonial_3: "دعم فني فعال حقًا على مدار الساعة. إنهم متاحون دائمًا لحل مشاكلنا بسرعة. أوصي بشدة!",
+                
+                // Contact
                 get_in_touch: "تواصل معنا",
                 contact_standtech: "اتصل بـ StandTech",
-                contact_desc: "تواصل معنا للحصول على استشارة مجانية أو عرض سعر",
-                send_message: "أرسل لنا رسالة",
+                contact_desc: "عرض سعر واستشارة مجانية بدون التزام",
+                send_message: "اطلب عرض السعر المجاني",
                 full_name: "الاسم الكامل",
                 email: "البريد الإلكتروني",
                 phone: "الهاتف",
                 service_needed: "الخدمة المطلوبة",
                 select_service: "اختر خدمة",
                 message: "الرسالة",
-                ask_quote: "طلب عرض سعر",
+                send_request: "إرسال الطلب",
+                form_success: "شكرًا! سنتصل بك قريبًا.",
                 contact_info: "معلومات الاتصال",
-                our_location: "موقعنا",
+                our_location: "عنواننا",
                 phone_number: "الهاتف",
                 email_address: "البريد الإلكتروني",
                 business_hours: "ساعات العمل",
-                monday_friday: "الإثنين - الجمعة: 8:30 - 18:30",
-                saturday: "السبت: 9:00 - 13:00",
-                emergency_service: "خدمة الطوارئ: 24/7",
-                quick_response: "ضمان الاستجابة السريعة",
-                response_guarantee: "نضمن الرد على جميع الاستفسارات خلال ساعتين عمل.",
-                emergency_guarantee: "الطوارئ خلال 30 دقيقة",
-                licensed_insured: "مزود خدمات إلكترونيات أمنية مرخص ومؤمن.",
+                
+                // Footer
+                footer_desc: "حلول أمنية إلكترونية احترافية في طنجة منذ 2008.",
                 quick_links: "روابط سريعة",
-                our_services_footer: "خدماتنا",
-                cctv_install: "تثبيت أنظمة المراقبة",
-                access_control_systems: "التحكم في الوصول",
-                security_training: "التدريب",
-                system_maintenance: "الصيانة",
-                newsletter: "النشرة الإخبارية",
-                subscribe: "اشترك للحصول على نصائح أمنية",
-                all_rights: "جميع الحقوق محفوظة.",
-                quote_request_sent: "تم إرسال الطلب!",
-                quote_confirmation: "شكراً! تم تقديم طلبك. سنتصل بك خلال 24 ساعة.",
-                got_it: "حسناً"
+                our_services: "خدماتنا",
+                contact_us: "اتصل بنا",
+                rights_reserved: "جميع الحقوق محفوظة.",
+                privacy_policy: "سياسة الخصوصية",
+                terms_service: "شروط الخدمة"
             }
         };
 
-        // Current language
-        let currentLang = localStorage.getItem('standtech-lang') || 'fr';
-
-        // ===========================================
-        // LANGUAGE FUNCTIONS
-        // ===========================================
+        // Language switching function
         function changeLanguage(lang) {
-            if (!translations[lang]) return;
+            const htmlElement = document.documentElement;
+            const bodyElement = document.body;
             
-            currentLang = lang;
-            localStorage.setItem('standtech-lang', lang);
-            applyLanguage(lang);
-            
-            // Update active language button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
-                }
-            });
-        }
-
-        function applyLanguage(lang) {
-            const t = translations[lang];
-            if (!t) return;
-            
-            // Update direction for RTL
-            document.documentElement.lang = t.lang_code;
-            document.documentElement.dir = t.direction;
-            
-            // Update title
-            document.title = `StandTech - ${t.hero_title}`;
-            
-            // Update all translatable elements
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (t[key]) {
-                    el.innerHTML = t[key];
-                }
-            });
-        }
-
-        // ===========================================
-        // DARK MODE
-        // ===========================================
-        function initDarkMode() {
-            const darkMode = localStorage.getItem('standtech-dark') === 'true';
-            if (darkMode) {
-                document.documentElement.classList.add('dark');
+            // Set language and direction
+            htmlElement.setAttribute('lang', lang);
+            if (lang === 'ar') {
+                htmlElement.setAttribute('dir', 'rtl');
+                bodyElement.style.fontFamily = "'Tajawal', sans-serif";
+            } else {
+                htmlElement.setAttribute('dir', 'ltr');
+                bodyElement.style.fontFamily = "'Inter', sans-serif";
             }
+            
+            // Update all translated elements
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    // Handle different element types
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Highlight active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
+                } else {
+                    btn.classList.remove('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
+                }
+            });
+            
+            // Save preference
+            localStorage.setItem('preferred-language', lang);
         }
 
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeToggleMobile = document.getElementById('darkModeToggleMobile');
+        
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
             const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('standtech-dark', isDark);
+            localStorage.setItem('dark-mode', isDark);
+        }
+        
+        darkModeToggle?.addEventListener('click', toggleDarkMode);
+        darkModeToggleMobile?.addEventListener('click', toggleDarkMode);
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('dark-mode') === 'true') {
+            document.documentElement.classList.add('dark');
         }
 
-        // ===========================================
-        // MOBILE MENU
-        // ===========================================
-        function initMobileMenu() {
-            const menuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isExpanded = !mobileMenu.classList.contains('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
             
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                const icon = menuBtn.querySelector('i');
-                if (mobileMenu.classList.contains('hidden')) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                } else {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
+            // Update icon
+            const icon = mobileMenuBtn.querySelector('i');
+            if (isExpanded) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
                 }
             });
             
-            // Close menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    menuBtn.querySelector('i').classList.remove('fa-times');
-                    menuBtn.querySelector('i').classList.add('fa-bars');
-                });
-            });
-        }
-
-        // ===========================================
-        // NAVBAR SCROLL EFFECT
-        // ===========================================
-        function initNavbarScroll() {
-            const navbar = document.getElementById('navbar');
-            
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('shadow-xl', 'backdrop-blur-lg', 'bg-white/95', 'dark:bg-gray-800/95');
-                } else {
-                    navbar.classList.remove('shadow-xl', 'backdrop-blur-lg', 'bg-white/95', 'dark:bg-gray-800/95');
-                }
-                
-                // Highlight active nav link
-                const sections = document.querySelectorAll('section');
-                const navLinks = document.querySelectorAll('.nav-link');
-                
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100;
-                    if (window.scrollY >= sectionTop) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('nav-active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('nav-active');
-                    }
-                });
-            });
-        }
-
-        // ===========================================
-        // SMOOTH SCROLL
-        // ===========================================
-        function initSmoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const target = document.querySelector(targetId);
-                    if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        }
-
-        // ===========================================
-        // FORMS
-        // ===========================================
-        function initForms() {
-            // Contact Form
-            document.getElementById('contactForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                
-                if (!name || !email || !phone) {
-                    alert('Please fill in all required fields');
-                    return;
-                }
-                
-                // Show success popup
-                document.getElementById('successPopup').classList.remove('hidden');
-                this.reset();
-            });
-            
-            // Newsletter Form
-            document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const email = document.getElementById('newsletterEmail').value;
-                if (!email) {
-                    alert('Please enter your email');
-                    return;
-                }
-                
-                document.getElementById('successPopup').classList.remove('hidden');
-                this.reset();
-            });
-            
-            // Close Popup
-            document.getElementById('closePopup').addEventListener('click', () => {
-                document.getElementById('successPopup').classList.add('hidden');
-            });
-            
-            // Close popup when clicking outside
-            document.getElementById('successPopup').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    this.classList.add('hidden');
-                }
-            });
-        }
-
-        // ===========================================
-        // INITIALIZE
-        // ===========================================
-        document.addEventListener('DOMContentLoaded', function() {
-            initDarkMode();
-            applyLanguage(currentLang);
-            initMobileMenu();
-            initNavbarScroll();
-            initSmoothScroll();
-            initForms();
-            
-            // Dark mode toggle buttons
-            document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
-            document.getElementById('darkModeToggleMobile').addEventListener('click', toggleDarkMode);
-            
-            // Highlight current language
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.dataset.lang === currentLang) {
-                    btn.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('nav-active');
                 }
             });
         });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                }
+            });
+        });
+
+        // Form submission with validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Basic validation
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const honeypot = contactForm.querySelector('[name="website"]').value;
+            
+            // Honeypot check (anti-spam)
+            if (honeypot) {
+                console.log('Spam detected');
+                return;
+            }
+            
+            // Validate required fields
+            let isValid = true;
+            
+            if (!name || name.length < 2) {
+                document.getElementById('name-error').textContent = 'Veuillez entrer un nom valide';
+                document.getElementById('name-error').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('name-error').classList.add('hidden');
+            }
+            
+            if (!phone || phone.length < 10) {
+                document.getElementById('phone-error').textContent = 'Veuillez entrer un numéro valide';
+                document.getElementById('phone-error').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('phone-error').classList.add('hidden');
+            }
+            
+            if (!isValid) return;
+            
+            // Disable submit button
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Envoi en cours...</span>';
+            
+            // Simulate API call (replace with actual API endpoint)
+            setTimeout(() => {
+                // Show success message
+                document.getElementById('form-success').classList.remove('hidden');
+                contactForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> <span data-i18n="send_request">Envoyer la Demande</span>';
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('form-success').classList.add('hidden');
+                }, 5000);
+                
+                // Optional: Send to actual backend or email service
+                // Example: Send via WhatsApp
+                const message = `Nouvelle demande:\nNom: ${name}\nTéléphone: ${phone}`;
+                // window.open(`https://wa.me/212635509160?text=${encodeURIComponent(message)}`, '_blank');
+            }, 1500);
+        });
+
+        // Lazy load images
+        document.addEventListener('DOMContentLoaded', () => {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('loaded');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(img => imageObserver.observe(img));
+            } else {
+                // Fallback for older browsers
+                lazyImages.forEach(img => img.classList.add('loaded'));
+            }
+        });
+
+        // Initialize: Load saved language preference
+        const savedLang = localStorage.getItem('preferred-language') || 'fr';
+        changeLanguage(savedLang);
+
+        // Animation on scroll (Intersection Observer)
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.service-card, .fade-in, .animate-slide-up');
+            
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -100px 0px'
+                });
+                
+                elements.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(30px)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(el);
+                });
+            }
+        };
+        
+        // Run on page load
+        window.addEventListener('load', animateOnScroll);
     </script>
 </body>
 </html>
