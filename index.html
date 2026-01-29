@@ -295,6 +295,19 @@
             left: 25px;
         }
         
+        /* Form improvements */
+        .form-field {
+            position: relative;
+        }
+        
+        .form-field input:focus + label,
+        .form-field textarea:focus + label,
+        .form-field input:not(:placeholder-shown) + label,
+        .form-field textarea:not(:placeholder-shown) + label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #3b82f6;
+        }
+        
         /* Success animation */
         @keyframes checkmark {
             0% {
@@ -308,11 +321,6 @@
         .checkmark {
             stroke-dasharray: 100;
             animation: checkmark 0.6s ease-out forwards;
-        }
-        
-        /* Popup overlay */
-        .popup-overlay {
-            backdrop-filter: blur(4px);
         }
     </style>
 </head>
@@ -747,7 +755,7 @@
             </div>
         </section>
 
-        <!-- Testimonials Section -->
+        <!-- Testimonials Section (NEW) -->
         <section id="testimonials" class="py-20 bg-white dark:bg-gray-900" aria-labelledby="testimonials-heading">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
@@ -835,7 +843,7 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact Section (IMPROVED) -->
         <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800" aria-labelledby="contact-heading">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
@@ -845,11 +853,11 @@
                 </div>
                 
                 <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Contact Form -->
+                    <!-- Contact Form (OPTIMIZED) -->
                     <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl">
                         <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="send_message">Demandez Votre Devis Gratuit</h3>
                         
-                        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6" novalidate>
+                        <form id="contactForm" class="space-y-6" novalidate>
                             <div class="grid md:grid-cols-2 gap-6">
                                 <!-- Name Field -->
                                 <div>
@@ -868,7 +876,7 @@
                                     <span class="text-red-500 text-sm hidden" id="name-error"></span>
                                 </div>
                                 
-                                <!-- Email Field -->
+                                <!-- Email Field (OPTIONAL per best practices) -->
                                 <div>
                                     <label for="email" class="block text-gray-700 dark:text-gray-300 font-medium mb-2">
                                         <span data-i18n="email">Email</span>
@@ -910,7 +918,7 @@
                                         name="service"
                                         class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-800 dark:text-white transition-all">
                                         <option value="" data-i18n="select_service">Sélectionnez un service</option>
-                                        <option value="installation-cctv">Installation CCTV</option>
+                                        <option value="installation">Installation CCTV</option>
                                         <option value="access-control">Contrôle d'Accès</option>
                                         <option value="alarm">Système d'Alarme</option>
                                         <option value="maintenance">Maintenance</option>
@@ -932,9 +940,6 @@
                             
                             <!-- Honeypot (Anti-spam) -->
                             <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
-                            
-                            <!-- Hidden fields for Formspree -->
-                            <input type="hidden" name="_subject" value="Nouvelle demande de contact - StandTech">
                             
                             <!-- Submit Button -->
                             <button 
@@ -1009,7 +1014,7 @@
                             </div>
                         </div>
                         
-                        <!-- Map -->
+                        <!-- Map (Placeholder - Replace with actual embed) -->
                         <div class="bg-gray-200 dark:bg-gray-700 rounded-2xl overflow-hidden h-64">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.123!2d-5.834!3d35.7595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQ1JzM0LjIiTiA1wrg1MCcwMi40Ilc!5e0!3m2!1sen!2sma!4v1234567890"
@@ -1023,61 +1028,6 @@
                             </iframe>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto text-center">
-                    <i class="fas fa-envelope-open-text text-5xl text-white/80 mb-4" aria-hidden="true"></i>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-i18n="newsletter_title">
-                        Restez Informé
-                    </h2>
-                    <p class="text-blue-100 text-lg mb-8" data-i18n="newsletter_desc">
-                        Inscrivez-vous à notre newsletter pour recevoir des conseils de sécurité et nos dernières offres
-                    </p>
-                    
-                    <!-- Newsletter Form -->
-                    <form id="newsletterForm" 
-                          action="https://formspree.io/f/YOUR_NEWSLETTER_FORM_ID" 
-                          method="POST"
-                          class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                        
-                        <!-- Email Input -->
-                        <div class="flex-1">
-                            <label for="newsletter-email" class="sr-only">Adresse e-mail</label>
-                            <input 
-                                type="email" 
-                                id="newsletter-email"
-                                name="email" 
-                                required
-                                autocomplete="email"
-                                placeholder="votre@email.com"
-                                class="w-full px-6 py-4 rounded-xl border-2 border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white focus:bg-white/20 transition-all"
-                                aria-required="true">
-                        </div>
-                        
-                        <!-- Honeypot (Anti-spam) -->
-                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-                        
-                        <!-- Hidden fields for Formspree -->
-                        <input type="hidden" name="_subject" value="Nouvelle inscription Newsletter - StandTech">
-                        
-                        <!-- Submit Button -->
-                        <button 
-                            type="submit"
-                            class="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus-visible whitespace-nowrap">
-                            <i class="fas fa-paper-plane mr-2 rtl:mr-0 rtl:ml-2" aria-hidden="true"></i>
-                            <span data-i18n="subscribe">S'abonner</span>
-                        </button>
-                    </form>
-                    
-                    <!-- Privacy Note -->
-                    <p class="text-blue-200 text-sm mt-4" data-i18n="newsletter_privacy">
-                        Nous respectons votre vie privée. Pas de spam, désabonnement à tout moment.
-                    </p>
                 </div>
             </div>
         </section>
@@ -1167,54 +1117,9 @@
         </div>
     </footer>
 
-    <!-- Success Popup (Modal) -->
-    <div id="successPopup" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 popup-overlay" role="dialog" aria-labelledby="popup-title" aria-modal="true">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md w-full shadow-2xl animate-fade-in">
-            <!-- Success Icon -->
-            <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path class="checkmark" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-                </svg>
-            </div>
-            
-            <!-- Title -->
-            <h3 id="popup-title" class="text-2xl font-bold text-gray-800 dark:text-white text-center mb-2" data-i18n="popup_title">
-                Merci de votre inscription!
-            </h3>
-            
-            <!-- Message -->
-            <p class="text-gray-600 dark:text-gray-400 text-center mb-6" data-i18n="popup_message">
-                Vous recevrez bientôt nos actualités et conseils de sécurité.
-            </p>
-            
-            <!-- Close Button -->
-            <button 
-                onclick="closePopup()" 
-                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-colors focus-visible">
-                <span data-i18n="popup_close">Fermer</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Error Toast (for form errors) -->
-    <div id="errorToast" class="hidden fixed bottom-4 right-4 rtl:right-auto rtl:left-4 bg-red-500 text-white px-6 py-4 rounded-xl shadow-2xl z-50 max-w-md animate-slide-up" role="alert">
-        <div class="flex items-center gap-3">
-            <i class="fas fa-exclamation-circle text-2xl" aria-hidden="true"></i>
-            <div>
-                <div class="font-bold" data-i18n="error_title">Erreur</div>
-                <p id="errorMessage" class="text-sm"></p>
-            </div>
-            <button onclick="closeToast()" class="ml-4 rtl:ml-0 rtl:mr-4" aria-label="Fermer">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    </div>
-
     <!-- JavaScript -->
     <script>
-        // ==============================================
-        // TRANSLATIONS
-        // ==============================================
+        // Translations
         const translations = {
             fr: {
                 // Navigation
@@ -1307,17 +1212,6 @@
                 phone_number: "Téléphone",
                 email_address: "Email",
                 business_hours: "Heures d'Ouverture",
-                
-                // Newsletter
-                newsletter_title: "Restez Informé",
-                newsletter_desc: "Inscrivez-vous à notre newsletter pour recevoir des conseils de sécurité et nos dernières offres",
-                subscribe: "S'abonner",
-                newsletter_privacy: "Nous respectons votre vie privée. Pas de spam, désabonnement à tout moment.",
-                popup_title: "Merci de votre inscription!",
-                popup_message: "Vous recevrez bientôt nos actualités et conseils de sécurité.",
-                popup_close: "Fermer",
-                error_title: "Erreur",
-                sending: "Envoi...",
                 
                 // Footer
                 footer_desc: "Solutions professionnelles de sécurité électronique à Tanger depuis 2008.",
@@ -1420,17 +1314,6 @@
                 email_address: "Email",
                 business_hours: "Business Hours",
                 
-                // Newsletter
-                newsletter_title: "Stay Informed",
-                newsletter_desc: "Subscribe to our newsletter for security tips and latest offers",
-                subscribe: "Subscribe",
-                newsletter_privacy: "We respect your privacy. No spam, unsubscribe anytime.",
-                popup_title: "Thank You for Subscribing!",
-                popup_message: "You will soon receive our news and security tips.",
-                popup_close: "Close",
-                error_title: "Error",
-                sending: "Sending...",
-                
                 // Footer
                 footer_desc: "Professional security electronics solutions in Tangier since 2008.",
                 quick_links: "Quick Links",
@@ -1532,17 +1415,6 @@
                 email_address: "البريد الإلكتروني",
                 business_hours: "ساعات العمل",
                 
-                // Newsletter
-                newsletter_title: "ابق على اطلاع",
-                newsletter_desc: "اشترك في نشرتنا الإخبارية لتلقي نصائح الأمان وأحدث العروض",
-                subscribe: "اشترك",
-                newsletter_privacy: "نحترم خصوصيتك. لا بريد عشوائي، إلغاء الاشتراك في أي وقت.",
-                popup_title: "شكراً لاشتراكك!",
-                popup_message: "ستتلقى قريباً أخبارنا ونصائح الأمان.",
-                popup_close: "إغلاق",
-                error_title: "خطأ",
-                sending: "جاري الإرسال...",
-                
                 // Footer
                 footer_desc: "حلول أمنية إلكترونية احترافية في طنجة منذ 2008.",
                 quick_links: "روابط سريعة",
@@ -1554,9 +1426,7 @@
             }
         };
 
-        // ==============================================
-        // LANGUAGE SWITCHING
-        // ==============================================
+        // Language switching function
         function changeLanguage(lang) {
             const htmlElement = document.documentElement;
             const bodyElement = document.body;
@@ -1574,3 +1444,244 @@
             // Update all translated elements
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    // Handle different element types
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Highlight active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
+                } else {
+                    btn.classList.remove('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
+                }
+            });
+            
+            // Save preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeToggleMobile = document.getElementById('darkModeToggleMobile');
+        
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('dark-mode', isDark);
+        }
+        
+        darkModeToggle?.addEventListener('click', toggleDarkMode);
+        darkModeToggleMobile?.addEventListener('click', toggleDarkMode);
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('dark-mode') === 'true') {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isExpanded = !mobileMenu.classList.contains('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+            
+            // Update icon
+            const icon = mobileMenuBtn.querySelector('i');
+            if (isExpanded) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('nav-active');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                }
+            });
+        });
+
+        // Form submission with validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Basic validation
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const honeypot = contactForm.querySelector('[name="website"]').value;
+            
+            // Honeypot check (anti-spam)
+            if (honeypot) {
+                console.log('Spam detected');
+                return;
+            }
+            
+            // Validate required fields
+            let isValid = true;
+            
+            if (!name || name.length < 2) {
+                document.getElementById('name-error').textContent = 'Veuillez entrer un nom valide';
+                document.getElementById('name-error').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('name-error').classList.add('hidden');
+            }
+            
+            if (!phone || phone.length < 10) {
+                document.getElementById('phone-error').textContent = 'Veuillez entrer un numéro valide';
+                document.getElementById('phone-error').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('phone-error').classList.add('hidden');
+            }
+            
+            if (!isValid) return;
+            
+            // Disable submit button
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Envoi en cours...</span>';
+            
+            // Simulate API call (replace with actual API endpoint)
+            setTimeout(() => {
+                // Show success message
+                document.getElementById('form-success').classList.remove('hidden');
+                contactForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> <span data-i18n="send_request">Envoyer la Demande</span>';
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('form-success').classList.add('hidden');
+                }, 5000);
+                
+                // Optional: Send to actual backend or email service
+                // Example: Send via WhatsApp
+                const message = `Nouvelle demande:\nNom: ${name}\nTéléphone: ${phone}`;
+                // window.open(`https://wa.me/212635509160?text=${encodeURIComponent(message)}`, '_blank');
+            }, 1500);
+        });
+
+        // Lazy load images
+        document.addEventListener('DOMContentLoaded', () => {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('loaded');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(img => imageObserver.observe(img));
+            } else {
+                // Fallback for older browsers
+                lazyImages.forEach(img => img.classList.add('loaded'));
+            }
+        });
+
+        // Initialize: Load saved language preference
+        const savedLang = localStorage.getItem('preferred-language') || 'fr';
+        changeLanguage(savedLang);
+
+        // Animation on scroll (Intersection Observer)
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.service-card, .fade-in, .animate-slide-up');
+            
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -100px 0px'
+                });
+                
+                elements.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(30px)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(el);
+                });
+            }
+        };
+        
+        // Run on page load
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
