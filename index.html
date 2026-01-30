@@ -905,13 +905,6 @@
       font-weight: 600;
     }
     .promo-cta-links a:hover{ color: var(--blue-600); }
-
-    /* ✅ NEW: Move Tawk chat up so it doesn't overlap WhatsApp */
-    #tawkchat-container,
-    .tawk-min-container {
-      bottom: 110px !important; /* adjust if needed */
-      right: 24px !important;
-    }
   </style>
 </head>
 
@@ -1010,11 +1003,17 @@
           </p>
 
           <div class="hero-buttons">
-           <a class="hero-btn-primary" href="tel:+212635509160">
-  <i class="fas fa-phone-alt"></i>
-  <span data-i18n="contact_us">Nous contacter</span>
-</a>
-            <div class="hero-stats">
+            <button class="hero-btn-primary" onclick="scrollToSection('#contact')">
+              <i class="fas fa-phone-alt"></i>
+              <span data-i18n="contact_us">Nous contacter</span>
+            </button>
+            <button class="hero-btn-secondary" onclick="scrollToSection('#services')">
+              <i class="fas fa-list"></i>
+              <span data-i18n="our_services">Nos services</span>
+            </button>
+          </div>
+
+          <div class="hero-stats">
             <div class="stat-item">
               <div class="stat-value">15+</div>
               <div class="stat-label" data-i18n="years_exp">Années d'expérience</div>
@@ -1170,7 +1169,7 @@
           <img class="partner-logo" src="https://kver.ma/img/cms/Logos/Dahua.png" alt="Dahua logo" loading="lazy">
         </div>
         <div class="partner-card" title="Hikvision">
-          <img class="partner-logo" src="https://emart.su/upload/iblock/098/hr5lrjnv8wqg63o2ru28zuddrg3rygap.png" alt="Hikvision logo" loading="lazy">
+          <img class="partner-logo" src="https://p7.hiclipart.com/preview/207/764/38/logo-brand-hikvision-product-trademark-cctv-logo.jpg" alt="Hikvision logo" loading="lazy">
         </div>
         <div class="partner-card" title="Ajax Systems">
           <img class="partner-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Ajax_system.png" alt="Ajax Systems logo" loading="lazy">
@@ -1934,31 +1933,18 @@
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
     data-cf-beacon='{"token": "3ed38e06d71a48aebe6e5b9d6a777079"}'></script>
   <!-- End Cloudflare Web Analytics -->
-
-  <!-- ✅ NEW: Force Tawk widget position (extra safety) -->
-  <script>
-    (function () {
-      const OFFSET_BOTTOM = 110; // px (moves chat up)
-      const OFFSET_RIGHT = 24;   // px
-
-      function moveTawk() {
-        const el =
-          document.querySelector("#tawkchat-container") ||
-          document.querySelector(".tawk-min-container");
-
-        if (el) {
-          el.style.bottom = OFFSET_BOTTOM + "px";
-          el.style.right = OFFSET_RIGHT + "px";
-        }
-      }
-
-      const obs = new MutationObserver(moveTawk);
-      obs.observe(document.body, { childList: true, subtree: true });
-
-      window.addEventListener("load", moveTawk);
-      setTimeout(moveTawk, 1500);
-    })();
-  </script>
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/697c50b8e8273d1c3f35dbb4/1jg6pmk2t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
