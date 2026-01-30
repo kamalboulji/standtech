@@ -905,6 +905,13 @@
       font-weight: 600;
     }
     .promo-cta-links a:hover{ color: var(--blue-600); }
+
+    /* ✅ NEW: Move Tawk chat up so it doesn't overlap WhatsApp */
+    #tawkchat-container,
+    .tawk-min-container {
+      bottom: 110px !important; /* adjust if needed */
+      right: 24px !important;
+    }
   </style>
 </head>
 
@@ -1933,18 +1940,45 @@
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
     data-cf-beacon='{"token": "3ed38e06d71a48aebe6e5b9d6a777079"}'></script>
   <!-- End Cloudflare Web Analytics -->
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/697c50b8e8273d1c3f35dbb4/1jg6pmk2t';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/697c50b8e8273d1c3f35dbb4/1jg6pmk2t';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <!-- ✅ NEW: Force Tawk widget position (extra safety) -->
+  <script>
+    (function () {
+      const OFFSET_BOTTOM = 110; // px (moves chat up)
+      const OFFSET_RIGHT = 24;   // px
+
+      function moveTawk() {
+        const el =
+          document.querySelector("#tawkchat-container") ||
+          document.querySelector(".tawk-min-container");
+
+        if (el) {
+          el.style.bottom = OFFSET_BOTTOM + "px";
+          el.style.right = OFFSET_RIGHT + "px";
+        }
+      }
+
+      const obs = new MutationObserver(moveTawk);
+      obs.observe(document.body, { childList: true, subtree: true });
+
+      window.addEventListener("load", moveTawk);
+      setTimeout(moveTawk, 1500);
+    })();
+  </script>
+
 </body>
 </html>
