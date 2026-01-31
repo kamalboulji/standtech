@@ -1,1287 +1,1938 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StandTech - Solutions Électroniques de Sécurité</title>
-    <meta name="description" content="Professional Security Electronics Solutions in Tanger, Morocco. Installation, Training & Service for CCTV, Access Control, Alarm Systems.">
-    <meta name="keywords" content="security, CCTV, access control, alarm systems, Tanger, Morocco, StandTech">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Hero gradient */
-        .hero-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
-        }
-        
-        .dark .hero-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
-        }
-        
-        /* Service card hover */
-        .service-card {
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .service-card img {
-            transition: transform 0.5s ease;
-        }
-        
-        .service-card:hover img {
-            transform: scale(1.1);
-        }
-        
-        /* Skill bar animation */
-        .skill-bar {
-            transition: width 1.5s ease-in-out;
-        }
-        
-        /* Bounce animation */
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .animate-bounce-slow {
-            animation: bounce 2s infinite;
-        }
-        
-        /* Pulse animation */
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.05); }
-        }
-        
-        .animate-pulse-slow {
-            animation: pulse 2s infinite;
-        }
-        
-        /* Fade in animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
-        
-        /* Nav active state */
-        .nav-active {
-            color: #3b82f6 !important;
-            font-weight: 600;
-        }
-        
-        /* Dark mode transition */
-        * {
-            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-        }
-        
-        /* Popup overlay */
-        .popup-overlay {
-            backdrop-filter: blur(4px);
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        
-        .dark ::-webkit-scrollbar-track {
-            background: #1f2937;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: #3b82f6;
-            border-radius: 5px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: #2563eb;
-        }
-        
-        /* RTL Support for Arabic */
-        [dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
-            --tw-space-x-reverse: 1;
-        }
-        
-        [dir="rtl"] .mr-2 { margin-right: 0; margin-left: 0.5rem; }
-        [dir="rtl"] .mr-3 { margin-right: 0; margin-left: 0.75rem; }
-        [dir="rtl"] .mr-4 { margin-right: 0; margin-left: 1rem; }
-        [dir="rtl"] .ml-2 { margin-left: 0; margin-right: 0.5rem; }
-        [dir="rtl"] .ml-4 { margin-left: 0; margin-right: 1rem; }
-        
-        /* Floating elements */
-        .float-shadow {
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .dark .float-shadow {
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StandTech - Solutions Électroniques de Sécurité Professionnelles | Tanger, Maroc</title>
+  <meta name="description" content="Solutions professionnelles de sécurité électronique à Tanger, Maroc. Installation, formation et service pour CCTV, contrôle d'accès, systèmes d'alarme et plus encore.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><path d='M50 15 L75 30 L75 55 C75 70 62 82 50 88 C38 82 25 70 25 55 L25 30 Z' fill='white'/><path d='M45 55 L40 50 L37 53 L45 61 L63 43 L60 40 Z' fill='%232563eb'/></svg>">
+
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><path d='M50 15 L75 30 L75 55 C75 70 62 82 50 88 C38 82 25 70 25 55 L25 30 Z' fill='white'/><path d='M45 55 L40 50 L37 53 L45 61 L63 43 L60 40 Z' fill='%232563eb'/></svg>">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://standtech.ma/">
+  <meta property="og:title" content="StandTech - Solutions Électroniques de Sécurité Professionnelles">
+  <meta property="og:description" content="Solutions professionnelles de sécurité électronique à Tanger, Maroc. Installation, formation et service pour CCTV, contrôle d'accès, systèmes d'alarme.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1200&h=630&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="StandTech">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StandTech - Solutions Électroniques de Sécurité Professionnelles">
+  <meta name="twitter:description" content="Solutions professionnelles de sécurité électronique à Tanger, Maroc. Installation, formation et service pour CCTV, contrôle d'accès, systèmes d'alarme.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1200&h=630&fit=crop">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-50: #eff6ff;
+      --blue-100: #dbeafe;
+      --blue-200: #bfdbfe;
+      --blue-400: #60a5fa;
+      --blue-500: #3b82f6;
+      --blue-600: #2563eb;
+      --blue-700: #1d4ed8;
+      --blue-900: #1e3a8a;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      --gray-950: #030712;
+      --green-400: #4ade80;
+      --green-500: #22c55e;
+      --green-600: #16a34a;
+      --red-500: #ef4444;
+      --yellow-400: #facc15;
+      --yellow-500: #eab308;
+      --pink-600: #db2777;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      color: var(--gray-800);
+      background-color: white;
+      overflow-x: hidden;
+    }
+
+    /* Dark Mode */
+    body.dark { background-color: var(--gray-900); color: white; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Hero Gradient */
+    .hero-gradient {
+      background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-700) 50%, var(--blue-900) 100%);
+      position: relative;
+    }
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Float Shadow Animation */
+    .float-shadow { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+    /* Bounce Slow Animation */
+    .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+    @keyframes bounce-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+    /* Pulse Slow Animation */
+    .animate-pulse-slow { animation: pulse-slow 2s ease-in-out infinite; }
+    @keyframes pulse-slow { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      width: 100%;
+      z-index: 50;
+      transition: all 0.3s ease;
+      background-color: white;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    body.dark .nav { background-color: var(--gray-800); }
+    .nav.scrolled {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    body.dark .nav.scrolled { background-color: rgba(31, 41, 55, 0.95); }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo { display: flex; align-items: center; }
+    .logo-icon {
+      background-color: var(--blue-600);
+      color: white;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      margin-right: 0.75rem;
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      text-decoration: none;
+    }
+    body.dark .logo-text { color: white; }
+    .logo-text span { color: var(--blue-600); }
+
+    .nav-links { display: none; align-items: center; gap: 1.5rem; }
+    @media (min-width: 1024px) { .nav-links { display: flex; } }
+
+    .nav-link {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 1rem;
+    }
+    body.dark .nav-link { color: var(--gray-300); }
+    .nav-link:hover { color: var(--blue-600); }
+    body.dark .nav-link:hover { color: var(--blue-400); }
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      border-left: 1px solid var(--gray-300);
+      padding-left: 1rem;
+    }
+    body.dark .lang-switcher { border-color: var(--gray-600); }
+
+    .lang-btn {
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-700);
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    body.dark .lang-btn { color: var(--gray-300); }
+    .lang-btn:hover { background-color: var(--gray-100); }
+    body.dark .lang-btn:hover { background-color: var(--gray-700); }
+    .lang-btn.active { background-color: var(--blue-100); color: var(--blue-600); }
+    body.dark .lang-btn.active { background-color: var(--blue-900); }
+    .lang-btn img { width: 1.25rem; height: 0.75rem; }
+
+    .dark-toggle {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      background-color: var(--gray-100);
+      color: var(--gray-700);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    body.dark .dark-toggle { background-color: var(--gray-700); color: var(--yellow-400); }
+    .dark-toggle:hover { background-color: var(--gray-200); }
+    body.dark .dark-toggle:hover { background-color: var(--gray-600); }
+
+    .cta-btn {
+      background-color: var(--blue-600);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .cta-btn:hover { background-color: var(--blue-700); box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3); }
+
+    .mobile-menu-btn {
+      display: flex;
+      padding: 0.5rem;
+      color: var(--gray-700);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    body.dark .mobile-menu-btn { color: white; }
+    @media (min-width: 1024px) { .mobile-menu-btn { display: none; } }
+
+    .mobile-controls { display: flex; align-items: center; gap: 0.5rem; }
+    @media (min-width: 1024px) { .mobile-controls { display: none; } }
+
+    .mobile-menu {
+      display: none;
+      padding-bottom: 1rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    body.dark .mobile-menu { border-color: var(--gray-700); }
+    .mobile-menu.open { display: block; }
+    @media (min-width: 1024px) { .mobile-menu { display: none !important; } }
+
+    .mobile-menu-content { display: flex; flex-direction: column; gap: 0.75rem; padding-top: 1rem; }
+
+    .mobile-nav-link {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: left;
+    }
+    body.dark .mobile-nav-link { color: var(--gray-300); }
+
+    .mobile-lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    body.dark .mobile-lang-switcher { border-color: var(--gray-700); }
+
+    .mobile-lang-btn {
+      flex: 1;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      background-color: var(--gray-100);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-700);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+    }
+    body.dark .mobile-lang-btn { background-color: var(--gray-700); color: var(--gray-300); }
+    .mobile-lang-btn.active { background-color: var(--blue-100); color: var(--blue-600); }
+    body.dark .mobile-lang-btn.active { background-color: var(--blue-900); }
+
+    .mobile-cta-btn {
+      background-color: var(--blue-600);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+    }
+    .mobile-cta-btn:hover { background-color: var(--blue-700); }
+
+    /* Hero Section */
+    .hero {
+      padding-top: 6rem;
+      padding-bottom: 4rem;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    @media (min-width: 768px) { .hero { padding-top: 8rem; padding-bottom: 6rem; } }
+
+    .hero-content { display: flex; flex-direction: column; align-items: center; gap: 3rem; }
+    @media (min-width: 1024px) { .hero-content { flex-direction: row; } }
+
+    .hero-left { flex: 1; text-align: center; }
+    @media (min-width: 1024px) { .hero-left { text-align: left; } }
+
+    .availability-badge {
+      display: inline-flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(4px);
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .availability-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: var(--green-400);
+      border-radius: 9999px;
+      margin-right: 0.5rem;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+    .availability-text { color: var(--blue-100); font-size: 0.875rem; font-weight: 500; }
+
+    .hero-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    @media (min-width: 768px) { .hero-title { font-size: 3rem; } }
+    @media (min-width: 1024px) { .hero-title { font-size: 3.75rem; } }
+
+    .hero-desc {
+      font-size: 1.125rem;
+      color: var(--blue-100);
+      margin-bottom: 2rem;
+      line-height: 1.75;
+    }
+    @media (min-width: 768px) { .hero-desc { font-size: 1.25rem; } }
+
+    .hero-buttons { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
+    @media (min-width: 640px) { .hero-buttons { flex-direction: row; } }
+    @media (min-width: 1024px) { .hero-buttons { justify-content: flex-start; } }
+
+    .hero-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      color: var(--blue-600);
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .hero-btn-primary:hover {
+      background-color: var(--gray-100);
+      transform: translateY(-2px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    }
+    .hero-btn-primary i { margin-right: 0.5rem; }
+
+    .hero-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 2px solid white;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .hero-btn-secondary:hover { background-color: white; color: var(--blue-600); }
+    .hero-btn-secondary i { margin-right: 0.5rem; }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .stat-item { text-align: center; }
+    .stat-value { font-size: 1.875rem; font-weight: 700; color: white; }
+    @media (min-width: 768px) { .stat-value { font-size: 2.25rem; } }
+    .stat-label { font-size: 0.875rem; color: var(--blue-200); }
+
+    /* Hero Right - Solutions Card */
+    .hero-right { flex: 1; }
+    .solutions-card {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    body.dark .solutions-card { background-color: var(--gray-800); }
+    .solutions-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    body.dark .solutions-title { color: white; }
+
+    .solutions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .solution-item {
+      background-color: var(--blue-50);
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      transition: background-color 0.2s;
+      cursor: pointer;
+    }
+    body.dark .solution-item { background-color: var(--gray-700); }
+    .solution-item:hover { background-color: var(--blue-100); }
+    body.dark .solution-item:hover { background-color: var(--gray-600); }
+    .solution-icon {
+      background-color: var(--blue-600);
+      color: white;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      transition: transform 0.2s;
+    }
+    .solution-item:hover .solution-icon { transform: scale(1.1); }
+    .solution-title { font-weight: 700; color: var(--gray-800); }
+    body.dark .solution-title { color: white; }
+    .solution-desc { font-size: 0.875rem; color: var(--gray-600); margin-top: 0.25rem; }
+    body.dark .solution-desc { color: var(--gray-400); }
+
+    .trust-badge {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--blue-600), var(--blue-700));
+      border-radius: 0.75rem;
+      color: white;
+    }
+    .trust-content { display: flex; align-items: center; justify-content: center; gap: 0.75rem; }
+    .trust-icon { font-size: 1.5rem; }
+    .trust-title { font-weight: 700; }
+    .trust-desc { font-size: 0.875rem; color: var(--blue-200); }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+    }
+    @media (min-width: 768px) { .scroll-indicator { display: block; } }
+    .scroll-indicator a { color: rgba(255, 255, 255, 0.7); transition: color 0.2s; }
+    .scroll-indicator a:hover { color: white; }
+
+    /* Section Styles */
+    .section { padding: 5rem 0; }
+    .section-bg-white { background-color: white; }
+    body.dark .section-bg-white { background-color: var(--gray-900); }
+    .section-bg-gray { background-color: var(--gray-50); }
+    body.dark .section-bg-gray { background-color: var(--gray-800); }
+
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .section-badge {
+      display: inline-block;
+      background-color: var(--blue-100);
+      color: var(--blue-600);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    body.dark .section-badge { background-color: var(--blue-900); color: var(--blue-400); }
+
+    .section-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) { .section-title { font-size: 2.25rem; } }
+    @media (min-width: 1024px) { .section-title { font-size: 3rem; } }
+    body.dark .section-title { color: white; }
+
+    .section-desc {
+      color: var(--gray-600);
+      font-size: 1.125rem;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+    body.dark .section-desc { color: var(--gray-400); }
+
+    /* Services Grid */
+    .services-grid { display: grid; gap: 2rem; }
+    @media (min-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .service-card {
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border: 1px solid var(--gray-100);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    body.dark .service-card { background-color: var(--gray-800); border-color: var(--gray-700); }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+
+    .service-image { height: 13rem; overflow: hidden; }
+    .service-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    .service-content { padding: 2rem; }
+    .service-icon-wrapper {
+      background-color: var(--blue-100);
+      color: var(--blue-600);
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      margin-top: -4rem;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    body.dark .service-icon-wrapper { background-color: var(--blue-900); color: var(--blue-400); }
+
+    .service-card-title { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin-bottom: 1rem; }
+    body.dark .service-card-title { color: white; }
+
+    .service-card-desc { color: var(--gray-600); margin-bottom: 1.5rem; }
+    body.dark .service-card-desc { color: var(--gray-400); }
+
+    .service-list { list-style: none; }
+    .service-list li { display: flex; align-items: center; color: var(--gray-700); margin-bottom: 0.75rem; }
+    body.dark .service-list li { color: var(--gray-300); }
+    .service-list li i { color: var(--green-500); margin-right: 0.75rem; }
+
+    /* About Section */
+    .about-content { display: flex; flex-direction: column; align-items: center; gap: 3rem; }
+    @media (min-width: 1024px) { .about-content { flex-direction: row; } }
+    .about-left, .about-right { flex: 1; }
+
+    .about-title { font-size: 1.875rem; font-weight: 700; color: var(--gray-800); margin-bottom: 1.5rem; }
+    @media (min-width: 768px) { .about-title { font-size: 2.25rem; } }
+    @media (min-width: 1024px) { .about-title { font-size: 3rem; } }
+    body.dark .about-title { color: white; }
+
+    .about-desc { color: var(--gray-600); font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.75; }
+    body.dark .about-desc { color: var(--gray-400); }
+
+    .skills { display: flex; flex-direction: column; gap: 1.5rem; }
+    .skill-item { margin-bottom: 0.5rem; }
+    .skill-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+    .skill-label { font-weight: 700; color: var(--gray-800); }
+    body.dark .skill-label { color: white; }
+    .skill-value { color: var(--blue-600); font-weight: 700; }
+    .skill-bar-bg { width: 100%; background-color: var(--gray-200); border-radius: 9999px; height: 0.75rem; }
+    body.dark .skill-bar-bg { background-color: var(--gray-700); }
+    .skill-bar { background: linear-gradient(90deg, var(--blue-500), var(--blue-600)); height: 0.75rem; border-radius: 9999px; transition: width 1s ease; }
+
+    .expertise-card { background-color: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+    body.dark .expertise-card { background-color: var(--gray-900); }
+
+    .expertise-title { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin-bottom: 1.5rem; }
+    body.dark .expertise-title { color: white; }
+
+    .expertise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .expertise-item { display: flex; align-items: center; padding: 1rem; background-color: var(--blue-50); border-radius: 0.75rem; }
+    body.dark .expertise-item { background-color: var(--gray-800); }
+    .expertise-item i { color: var(--blue-600); font-size: 1.25rem; margin-right: 0.75rem; }
+    .expertise-item span { color: var(--gray-800); font-weight: 500; }
+    body.dark .expertise-item span { color: white; }
+
+    .support-banner { margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, var(--blue-600), var(--blue-700)); border-radius: 0.75rem; color: white; }
+    .support-content { display: flex; align-items: center; gap: 1rem; }
+    .support-icon { background-color: rgba(255, 255, 255, 0.2); padding: 1rem; border-radius: 0.75rem; }
+    .support-icon i { font-size: 1.875rem; }
+    .support-title { font-weight: 700; font-size: 1.125rem; }
+    .support-desc { font-size: 0.875rem; color: var(--blue-100); }
+
+    /* Contact Section */
+    .contact-grid { display: grid; gap: 3rem; }
+    @media (min-width: 1024px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .contact-form-card { background-color: var(--gray-50); border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+    body.dark .contact-form-card { background-color: var(--gray-800); }
+
+    .contact-form-title { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin-bottom: 1.5rem; }
+    body.dark .contact-form-title { color: white; }
+
+    .form { display: flex; flex-direction: column; gap: 1.5rem; }
+    .form-row { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) { .form-row { grid-template-columns: repeat(2, 1fr); } }
+
+    .form-group label { display: block; color: var(--gray-700); font-weight: 500; margin-bottom: 0.5rem; }
+    body.dark .form-group label { color: var(--gray-300); }
+    .form-group label .required { color: var(--red-500); }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background-color: white;
+      color: var(--gray-800);
+    }
+    body.dark .form-input, body.dark .form-select, body.dark .form-textarea { background-color: var(--gray-700); border-color: var(--gray-600); color: white; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--blue-500); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
+    .form-textarea { resize: none; }
+
+    .form-submit {
+      width: 100%;
+      background-color: var(--blue-600);
+      color: white;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+    .form-submit:hover { background-color: var(--blue-700); box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3); }
+
+    .contact-info-title { font-size: 1.5rem; font-weight: 700; color: var(--gray-800); margin-bottom: 1.5rem; }
+    body.dark .contact-info-title { color: white; }
+
+    .contact-items { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem; }
+    .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+
+    .contact-item-icon { background-color: var(--blue-100); color: var(--blue-600); padding: 1rem; border-radius: 0.75rem; }
+    body.dark .contact-item-icon { background-color: var(--blue-900); color: var(--blue-400); }
+
+    .contact-item-title { font-weight: 700; color: var(--gray-800); }
+    body.dark .contact-item-title { color: white; }
+
+    .contact-item-text { color: var(--gray-600); }
+    body.dark .contact-item-text { color: var(--gray-400); }
+
+    .contact-item-sub { font-size: 0.875rem; color: var(--gray-500); }
+
+    .response-banner { background-color: var(--blue-50); border-radius: 1rem; padding: 1.5rem; border: 1px solid var(--blue-100); }
+    body.dark .response-banner { background-color: var(--gray-800); border-color: var(--gray-700); }
+
+    .response-title { font-weight: 700; color: var(--gray-800); margin-bottom: 0.75rem; }
+    body.dark .response-title { color: white; }
+    .response-desc { color: var(--gray-600); margin-bottom: 1rem; }
+    body.dark .response-desc { color: var(--gray-400); }
+
+    .response-highlight { display: flex; align-items: center; gap: 0.75rem; color: var(--blue-600); font-weight: 600; }
+    body.dark .response-highlight { color: var(--blue-400); }
+    .response-highlight i { color: var(--yellow-500); font-size: 1.25rem; }
+
+    /* Footer */
+    .footer { background-color: var(--gray-800); color: white; padding: 4rem 0; }
+    body.dark .footer { background-color: var(--gray-950); }
+
+    .footer-grid { display: grid; gap: 2rem; margin-bottom: 3rem; }
+    @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .footer-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .footer-logo { display: flex; align-items: center; margin-bottom: 1.5rem; }
+    .footer-logo-icon { background-color: var(--blue-600); color: white; padding: 0.5rem; border-radius: 0.5rem; margin-right: 0.75rem; }
+    .footer-logo-text { font-size: 1.5rem; font-weight: 700; }
+    .footer-logo-text span { color: var(--blue-400); }
+
+    .footer-desc { color: var(--gray-400); margin-bottom: 1.5rem; }
+
+    .social-links { display: flex; gap: 0.75rem; }
+    .social-link { background-color: var(--gray-700); padding: 0.75rem; border-radius: 0.5rem; color: white; text-decoration: none; transition: background-color 0.2s; }
+    .social-link:hover { background-color: var(--blue-600); }
+    .social-link.instagram:hover { background-color: var(--pink-600); }
+    .social-link.youtube:hover { background-color: var(--red-500); }
+    .social-link.whatsapp:hover { background-color: var(--green-600); }
+
+    .footer-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; }
+
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.75rem; }
+    .footer-links button {
+      color: var(--gray-400);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: color 0.2s;
+      padding: 0;
+    }
+    .footer-links button:hover { color: white; }
+
+    .newsletter-desc { color: var(--gray-400); margin-bottom: 1rem; }
+    .newsletter-form { display: flex; }
+    .newsletter-input {
+      background-color: var(--gray-700);
+      color: white;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 0.75rem 0 0 0.75rem;
+      flex: 1;
+      font-size: 1rem;
+    }
+    .newsletter-input:focus { outline: none; box-shadow: 0 0 0 2px var(--blue-500); }
+    .newsletter-submit {
+      background-color: var(--blue-600);
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border: none;
+      border-radius: 0 0.75rem 0.75rem 0;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .newsletter-submit:hover { background-color: var(--blue-700); }
+
+    .footer-bottom { border-top: 1px solid var(--gray-700); padding-top: 2rem; text-align: center; color: var(--gray-400); }
+
+    /* Floating WhatsApp */
+    .floating-whatsapp { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 50; }
+    .whatsapp-btn {
+      background-color: var(--green-500);
+      color: white;
+      padding: 1rem;
+      border-radius: 9999px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .whatsapp-btn:hover { background-color: var(--green-600); }
+    .whatsapp-btn i { font-size: 1.875rem; }
+    .whatsapp-badge {
+      position: absolute;
+      top: -0.25rem;
+      right: -0.25rem;
+      background-color: var(--red-500);
+      color: white;
+      font-size: 0.75rem;
+      border-radius: 9999px;
+      width: 1.25rem;
+      height: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* RTL Support */
+    html[dir="rtl"] .logo-icon { margin-right: 0; margin-left: 0.75rem; }
+    html[dir="rtl"] .lang-switcher { border-left: none; border-right: 1px solid var(--gray-300); padding-left: 0; padding-right: 1rem; }
+    html[dir="rtl"] .hero-btn-primary i,
+    html[dir="rtl"] .hero-btn-secondary i { margin-right: 0; margin-left: 0.5rem; }
+    html[dir="rtl"] .service-list li i { margin-right: 0; margin-left: 0.75rem; }
+    html[dir="rtl"] .expertise-item i { margin-right: 0; margin-left: 0.75rem; }
+    html[dir="rtl"] .contact-item { flex-direction: row-reverse; }
+    html[dir="rtl"] .footer-logo-icon { margin-right: 0; margin-left: 0.75rem; }
+    html[dir="rtl"] .floating-whatsapp { right: auto; left: 1.5rem; }
+    html[dir="rtl"] .whatsapp-badge { right: auto; left: -0.25rem; }
+
+    /* ===== Partners Section (NEW) ===== */
+    .partners-grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      align-items:center;
+      margin-top: 2rem;
+    }
+    @media (min-width: 768px){
+      .partners-grid{ grid-template-columns: repeat(4, 1fr); }
+    }
+    .partner-card{
+      background: white;
+      border: 1px solid var(--gray-100);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.06);
+    }
+    body.dark .partner-card{
+      background: var(--gray-800);
+      border-color: var(--gray-700);
+    }
+    .partner-logo{
+      width: 100%;
+      height: 52px;
+      object-fit: contain;
+      filter: grayscale(10%);
+      opacity: 0.95;
+    }
+    .partner-card:hover .partner-logo{
+      filter: none;
+      opacity: 1;
+    }
+
+    /* ===== Promo Card (NEW INFO) ===== */
+    .promo-card{
+      background: linear-gradient(135deg, var(--blue-50), white);
+      border: 1px solid var(--blue-100);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      margin-top: 2rem;
+    }
+    body.dark .promo-card{
+      background: linear-gradient(135deg, var(--gray-800), var(--gray-900));
+      border-color: var(--gray-700);
+    }
+    .promo-title{
+      font-weight: 800;
+      color: var(--gray-800);
+      margin-bottom: 0.75rem;
+    }
+    body.dark .promo-title{ color: white; }
+    .promo-list{
+      margin: 0;
+      padding-left: 1.25rem;
+      color: var(--gray-700);
+    }
+    body.dark .promo-list{ color: var(--gray-300); }
+    .promo-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap: .5rem;
+      margin-top: 1rem;
+    }
+    .promo-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      padding:.4rem .7rem;
+      border-radius: 9999px;
+      background: var(--blue-100);
+      color: var(--blue-700);
+      font-weight: 600;
+      font-size: .85rem;
+    }
+    body.dark .promo-badge{
+      background: var(--blue-900);
+      color: var(--blue-200);
+    }
+    .promo-cta-row{
+      display:flex;
+      flex-direction:column;
+      gap:.75rem;
+      margin-top: 1.25rem;
+    }
+    @media(min-width:768px){
+      .promo-cta-row{ flex-direction:row; align-items:center; justify-content:space-between; }
+    }
+    .promo-cta-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.75rem;
+      color: var(--gray-700);
+    }
+    body.dark .promo-cta-links{ color: var(--gray-300); }
+    .promo-cta-links a{
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .promo-cta-links a:hover{ color: var(--blue-600); }
+  </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-    
-    <!-- Navigation -->
-    <nav id="navbar" class="bg-white dark:bg-gray-800 shadow-lg fixed w-full z-50 transition-all duration-300">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
-                        <i class="fas fa-shield-alt text-xl"></i>
-                    </div>
-                    <a href="#home" class="text-2xl font-bold text-gray-800 dark:text-white">
-                        Stand<span class="text-blue-600">Tech</span>
-                    </a>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-6">
-                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-i18n="home">Accueil</a>
-                    <a href="#services" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-i18n="services">Services</a>
-                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-i18n="about">À propos</a>
-                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium" data-i18n="contact">Contact</a>
-                    
-                    <!-- Language Switcher -->
-                    <div class="flex items-center space-x-1 border-l border-gray-300 dark:border-gray-600 pl-4">
-                        <button onclick="changeLanguage('fr')" class="lang-btn px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300" data-lang="fr">
-                            <img src="https://flagcdn.com/w20/fr.png" alt="FR" class="inline w-5 h-3 mr-1"> FR
-                        </button>
-                        <button onclick="changeLanguage('en')" class="lang-btn px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300" data-lang="en">
-                            <img src="https://flagcdn.com/w20/gb.png" alt="EN" class="inline w-5 h-3 mr-1"> EN
-                        </button>
-                        <button onclick="changeLanguage('ar')" class="lang-btn px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300" data-lang="ar">
-                            <img src="https://flagcdn.com/w20/sa.png" alt="AR" class="inline w-5 h-3 mr-1"> AR
-                        </button>
-                    </div>
-                    
-                    <!-- Dark Mode Toggle -->
-                    <button id="darkModeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
-                        <i class="fas fa-moon dark:hidden text-lg"></i>
-                        <i class="fas fa-sun hidden dark:inline text-lg"></i>
-                    </button>
-                    
-                    <!-- CTA Button -->
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl" data-i18n="get_quote">
-                        Obtenir un devis
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <div class="lg:hidden flex items-center space-x-2">
-                    <button id="darkModeToggleMobile" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-yellow-400">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:inline"></i>
-                    </button>
-                    <button id="mobileMenuBtn" class="p-2 text-gray-700 dark:text-white">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden lg:hidden pb-4 border-t border-gray-200 dark:border-gray-700">
-                <div class="flex flex-col space-y-3 pt-4">
-                    <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2" data-i18n="home">Accueil</a>
-                    <a href="#services" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2" data-i18n="services">Services</a>
-                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2" data-i18n="about">À propos</a>
-                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium py-2" data-i18n="contact">Contact</a>
-                    
-                    <!-- Mobile Language Switcher -->
-                    <div class="flex space-x-2 pt-2 border-t border-gray-200 dark:border-gray-700">
-                        <button onclick="changeLanguage('fr')" class="lang-btn flex-1 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300">
-                            <img src="https://flagcdn.com/w20/fr.png" alt="FR" class="inline w-5 h-3 mr-1"> FR
-                        </button>
-                        <button onclick="changeLanguage('en')" class="lang-btn flex-1 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300">
-                            <img src="https://flagcdn.com/w20/gb.png" alt="EN" class="inline w-5 h-3 mr-1"> EN
-                        </button>
-                        <button onclick="changeLanguage('ar')" class="lang-btn flex-1 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300">
-                            <img src="https://flagcdn.com/w20/sa.png" alt="AR" class="inline w-5 h-3 mr-1"> AR
-                        </button>
-                    </div>
-                    
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors" data-i18n="get_quote">
-                        Obtenir un devis
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24 min-h-screen flex items-center">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Left Content -->
-                <div class="lg:w-1/2 text-center lg:text-left">
-                    <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                        <span class="text-blue-100 text-sm font-medium" data-i18n="available_24">Disponible 24/7</span>
-                    </div>
-                    
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-i18n="hero_title">
-                        Solutions Électroniques de Sécurité Professionnelles
-                    </h1>
-                    
-                    <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed" data-i18n="hero_desc">
-                        Solutions professionnelles de sécurité électronique à Tanger, Maroc. Installation, formation et service pour CCTV, contrôle d'accès, systèmes d'alarme et plus encore.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#contact" class="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
-                            <i class="fas fa-phone-alt mr-2"></i>
-                            <span data-i18n="contact_us">Nous contacter</span>
-                        </a>
-                        <a href="#services" class="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-blue-600 transition-all">
-                            <i class="fas fa-list mr-2"></i>
-                            <span data-i18n="our_services">Nos services</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20">
-                        <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-bold text-white">15+</div>
-                            <div class="text-blue-200 text-sm" data-i18n="years_exp">Années d'expérience</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-bold text-white">500+</div>
-                            <div class="text-blue-200 text-sm" data-i18n="projects">Projets réalisés</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-bold text-white">24/7</div>
-                            <div class="text-blue-200 text-sm" data-i18n="support">Support</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Content - Feature Cards -->
-                <div class="lg:w-1/2">
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-2xl float-shadow">
-                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6 text-center" data-i18n="our_solutions">Nos Solutions</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors cursor-pointer group">
-                                <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-camera text-xl"></i>
-                                </div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="cctv">Systèmes CCTV</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="cctv_desc">Surveillance HD</p>
-                            </div>
-                            <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors cursor-pointer group">
-                                <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-fingerprint text-xl"></i>
-                                </div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="access_control">Contrôle d'Accès</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="access_desc">Biométrique</p>
-                            </div>
-                            <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors cursor-pointer group">
-                                <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-bell text-xl"></i>
-                                </div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="alarm_systems">Systèmes d'Alarme</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="alarm_desc">Protection 24/7</p>
-                            </div>
-                            <div class="bg-blue-50 dark:bg-gray-700 p-5 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors cursor-pointer group">
-                                <div class="bg-blue-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-wifi text-xl"></i>
-                                </div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="network_sec">Sécurité Réseau</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1" data-i18n="network_desc">Infrastructure</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Trust Badge -->
-                        <div class="mt-6 p-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white">
-                            <div class="flex items-center justify-center gap-3">
-                                <i class="fas fa-shield-alt text-2xl"></i>
-                                <div>
-                                    <div class="font-bold" data-i18n="certified">Certifié & Agréé</div>
-                                    <div class="text-sm text-blue-200" data-i18n="guarantee">Garantie de qualité</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow hidden md:block">
-            <a href="#services" class="text-white/70 hover:text-white">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
-        </div>
-    </section>
+<body>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="what_we_offer">Ce que nous offrons</span>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="professional_services">Nos Services Professionnels</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-lg max-w-3xl mx-auto" data-i18n="comprehensive_solutions">Solutions de sécurité complètes adaptées à vos besoins</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Installation Service -->
-                <div class="service-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
-                    <div class="overflow-hidden h-52">
-                        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&h=600&fit=crop" alt="Security camera installation" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg">
-                            <i class="fas fa-tools text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="installation">Installation</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="installation_desc">Installation professionnelle de tous les systèmes de sécurité y compris CCTV, contrôle d'accès, systèmes d'alarme et interphones.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="site_assessment">Évaluation et planification du site</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="equipment_procurement">Approvisionnement en équipement</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="professional_install">Installation professionnelle</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="system_testing">Test et mise en service</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Training Service -->
-                <div class="service-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
-                    <div class="overflow-hidden h-52">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" alt="Team training workshop" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg">
-                            <i class="fas fa-chalkboard-teacher text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="training">Formation</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="training_desc">Programmes de formation complets pour que votre personnel puisse utiliser et gérer efficacement les systèmes de sécurité.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="system_training">Formation à l'utilisation du système</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="maintenance">Procédures de maintenance</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="emergency">Protocoles d'urgence</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="refreshers">Support continu</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Service & Maintenance -->
-                <div class="service-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700">
-                    <div class="overflow-hidden h-52">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Technical maintenance work" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 -mt-16 relative z-10 shadow-lg">
-                            <i class="fas fa-cogs text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="service_maintenance">Service & Maintenance</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="service_desc">Entretien régulier et réparation rapide pour garantir que vos systèmes de sécurité fonctionnent toujours.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="preventive">Entretien préventif</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="emergency_repairs">Réparations d'urgence 24/7</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="upgrades">Mises à niveau du système</span>
-                            </li>
-                            <li class="flex items-center text-gray-700 dark:text-gray-300">
-                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                                <span data-i18n="remote_support">Surveillance à distance</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <a href="#home" class="logo-text">Stand<span>Tech</span></a>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Left Content -->
-                <div class="lg:w-1/2">
-                    <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="about_us">À propos de nous</span>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="why_choose">Pourquoi Choisir StandTech?</h2>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed" data-i18n="why_desc">
-                        Avec plus de 15 ans d'expérience dans l'industrie de l'électronique de sécurité, StandTech fournit des solutions fiables et professionnelles pour les clients résidentiels et commerciaux.
-                    </p>
-                    
-                    <!-- Progress Bars -->
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold text-gray-800 dark:text-white" data-i18n="certified_tech">Techniciens Certifiés</span>
-                                <span class="text-blue-600 font-bold">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold text-gray-800 dark:text-white" data-i18n="customer_satisfaction">Satisfaction Client</span>
-                                <span class="text-blue-600 font-bold">98%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 98%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold text-gray-800 dark:text-white" data-i18n="response_time">Temps de Réponse</span>
-                                <span class="text-blue-600 font-bold">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Content -->
-                <div class="lg:w-1/2">
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl">
-                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="expertise">Notre Expertise</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="cctv">Systèmes CCTV</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="access_control">Contrôle d'Accès</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="alarm_systems">Systèmes d'Alarme</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="intercom">Interphones</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="fire_detection">Détection Incendie</span>
-                            </div>
-                            <div class="flex items-center p-4 bg-blue-50 dark:bg-gray-800 rounded-xl">
-                                <i class="fas fa-check-circle text-blue-600 text-xl mr-3"></i>
-                                <span class="text-gray-800 dark:text-white font-medium" data-i18n="network_sec">Sécurité Réseau</span>
-                            </div>
-                        </div>
-                        
-                        <!-- 24/7 Support Banner -->
-                        <div class="mt-8 p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white">
-                            <div class="flex items-center gap-4">
-                                <div class="bg-white/20 p-4 rounded-xl">
-                                    <i class="fas fa-headset text-3xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg" data-i18n="support_24">Support 24/7 Disponible</h4>
-                                    <p class="text-blue-100 text-sm" data-i18n="support_desc">Les appels d'urgence sont traités dans les 30 minutes maximum</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Desktop Menu -->
+        <div class="nav-links">
+          <button class="nav-link" onclick="scrollToSection('#home')" data-i18n="home">Accueil</button>
+          <button class="nav-link" onclick="scrollToSection('#services')" data-i18n="services">Services</button>
+          <button class="nav-link" onclick="scrollToSection('#partners')" data-i18n="partners_nav">Partenaires</button>
+          <button class="nav-link" onclick="scrollToSection('#about')" data-i18n="about">À propos</button>
+          <button class="nav-link" onclick="scrollToSection('#contact')" data-i18n="contact">Contact</button>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4" data-i18n="get_in_touch">Prenez contact</span>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4" data-i18n="contact_standtech">Contactez StandTech</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-lg" data-i18n="contact_desc">Prenez contact pour une consultation gratuite ou un devis</p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
-                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="send_message">Envoyez-nous un message</h3>
-                    
-                    <form id="contactForm" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="full_name">Nom Complet <span class="text-red-500">*</span></label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="email">Email <span class="text-red-500">*</span></label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
-                            </div>
-                        </div>
-                        
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="phone">Téléphone <span class="text-red-500">*</span></label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+212 6 35 50 91 60" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="service_needed">Service Nécessaire</label>
-                                <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white">
-                                    <option value="" data-i18n="select_service">Sélectionnez un service</option>
-                                    <option value="installation">Installation</option>
-                                    <option value="training">Formation</option>
-                                    <option value="maintenance">Maintenance</option>
-                                    <option value="consultation">Consultation</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2" data-i18n="message">Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Décrivez vos besoins en sécurité..." class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-white resize-none"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-                            <i class="fas fa-paper-plane"></i>
-                            <span data-i18n="ask_quote">Demander un Devis</span>
-                        </button>
-                    </form>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6" data-i18n="contact_info">Informations de Contact</h3>
-                    
-                    <div class="space-y-6 mb-8">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl">
-                                <i class="fas fa-map-marker-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="our_location">Notre Adresse</h4>
-                                <p class="text-gray-600 dark:text-gray-400">BELLE VUE RUE 71 N 9 1ERE ETAGE N 2</p>
-                                <p class="text-gray-600 dark:text-gray-400">90000 TANGER, Morocco</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl">
-                                <i class="fas fa-phone text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="phone_number">Téléphone</h4>
-                                <p class="text-gray-600 dark:text-gray-400">0635 509 160</p>
-                                <p class="text-sm text-gray-500 dark:text-gray-500">24/7 Emergency: 0635 509 160</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="email_address">Email</h4>
-                                <p class="text-gray-600 dark:text-gray-400">standtechkamal@gmail.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start gap-4">
-                            <div class="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 p-4 rounded-xl">
-                                <i class="fas fa-clock text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 dark:text-white" data-i18n="business_hours">Heures d'Ouverture</h4>
-                                <p class="text-gray-600 dark:text-gray-400" data-i18n="monday_friday">Lundi - Vendredi: 8h30 - 18h30</p>
-                                <p class="text-gray-600 dark:text-gray-400" data-i18n="saturday">Samedi: 9h00 - 13h00</p>
-                                <p class="text-gray-600 dark:text-gray-400" data-i18n="emergency_service">Service d'urgence: 24/7</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quick Response Banner -->
-                    <div class="bg-blue-50 dark:bg-gray-800 rounded-2xl p-6 border border-blue-100 dark:border-gray-700">
-                        <h4 class="font-bold text-gray-800 dark:text-white mb-3" data-i18n="quick_response">Garantie de Réponse Rapide</h4>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4" data-i18n="response_guarantee">Nous garantissons de répondre à toutes les demandes dans les 2 heures ouvrables.</p>
-                        <div class="flex items-center gap-3 text-blue-600 dark:text-blue-400 font-semibold">
-                            <i class="fas fa-bolt text-yellow-500 text-xl"></i>
-                            <span data-i18n="emergency_guarantee">Urgences traitées en 30 min</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 dark:bg-gray-950 text-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <!-- Company Info -->
-                <div>
-                    <div class="flex items-center mb-6">
-                        <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
-                            <i class="fas fa-shield-alt text-xl"></i>
-                        </div>
-                        <span class="text-2xl font-bold">Stand<span class="text-blue-400">Tech</span></span>
-                    </div>
-                    <p class="text-gray-400 mb-6" data-i18n="licensed_insured">Fournisseur de services de sécurité agréé et assuré.</p>
-                    <div class="flex space-x-3">
-                        <a href="https://www.facebook.com/Standtechma" target="_blank" class="bg-gray-700 hover:bg-blue-600 p-3 rounded-lg transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/standtech.ma/" target="_blank" class="bg-gray-700 hover:bg-pink-600 p-3 rounded-lg transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@StandTech" target="_blank" class="bg-gray-700 hover:bg-red-600 p-3 rounded-lg transition-colors">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://wa.me/212635509160" target="_blank" class="bg-gray-700 hover:bg-green-600 p-3 rounded-lg transition-colors">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6" data-i18n="quick_links">Liens Rapides</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors" data-i18n="home">Accueil</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="services">Services</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors" data-i18n="about">À propos</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors" data-i18n="contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Our Services -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6" data-i18n="our_services_footer">Nos Services</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="cctv_install">Installation CCTV</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="access_control_systems">Contrôle d'Accès</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="security_training">Formation</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors" data-i18n="system_maintenance">Maintenance</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Newsletter -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6" data-i18n="newsletter">Newsletter</h4>
-                    <p class="text-gray-400 mb-4" data-i18n="subscribe">Abonnez-vous pour des conseils de sécurité</p>
-                    <form id="newsletterForm" class="flex">
-                        <input type="email" id="newsletterEmail" placeholder="Votre email" required class="bg-gray-700 text-white px-4 py-3 rounded-l-xl w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-r-xl transition-colors">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <!-- Copyright -->
-            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 StandTech. <span data-i18n="all_rights">Tous droits réservés.</span></p>
-                <p class="mt-2" data-i18n="licensed_insured">Fournisseur de services de sécurité agréé et assuré</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/212635509160" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center animate-bounce-slow transition-colors">
-            <i class="fab fa-whatsapp text-3xl"></i>
-        </a>
-        <div class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse-slow">
-            <span>1</span>
-        </div>
-    </div>
-
-    <!-- Success Popup -->
-    <div id="successPopup" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 popup-overlay">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl">
-            <div class="mx-auto w-20 h-20 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-6">
-                <i class="fas fa-check text-green-600 dark:text-green-400 text-4xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3" data-i18n="quote_request_sent">Demande envoyée!</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="quote_confirmation">
-                Merci! Votre demande a été soumise. Nous vous contacterons dans les 24 heures.
-            </p>
-            <button id="closePopup" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors" data-i18n="got_it">
-                Compris
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="fr">
+              <img src="https://flagcdn.com/w20/fr.png" alt="FR"> FR
             </button>
+            <button class="lang-btn" data-lang="en">
+              <img src="https://flagcdn.com/w20/gb.png" alt="EN"> EN
+            </button>
+            <button class="lang-btn" data-lang="ar">
+              <img src="https://flagcdn.com/w20/sa.png" alt="AR"> AR
+            </button>
+          </div>
+
+          <button class="dark-toggle" id="darkToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <button class="cta-btn" onclick="scrollToSection('#contact')" data-i18n="get_quote">Obtenir un devis</button>
         </div>
+
+        <!-- Mobile Controls -->
+        <div class="mobile-controls">
+          <button class="dark-toggle" id="darkToggleMobile">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+          <button class="mobile-nav-link" onclick="scrollToSection('#home'); closeMobileMenu();" data-i18n="home">Accueil</button>
+          <button class="mobile-nav-link" onclick="scrollToSection('#services'); closeMobileMenu();" data-i18n="services">Services</button>
+          <button class="mobile-nav-link" onclick="scrollToSection('#partners'); closeMobileMenu();" data-i18n="partners_nav">Partenaires</button>
+          <button class="mobile-nav-link" onclick="scrollToSection('#about'); closeMobileMenu();" data-i18n="about">À propos</button>
+          <button class="mobile-nav-link" onclick="scrollToSection('#contact'); closeMobileMenu();" data-i18n="contact">Contact</button>
+
+          <div class="mobile-lang-switcher">
+            <button class="mobile-lang-btn active" data-lang="fr">
+              <img src="https://flagcdn.com/w20/fr.png" alt="FR"> FR
+            </button>
+            <button class="mobile-lang-btn" data-lang="en">
+              <img src="https://flagcdn.com/w20/gb.png" alt="EN"> EN
+            </button>
+            <button class="mobile-lang-btn" data-lang="ar">
+              <img src="https://flagcdn.com/w20/sa.png" alt="AR"> AR
+            </button>
+          </div>
+
+          <button class="mobile-cta-btn" onclick="scrollToSection('#contact'); closeMobileMenu();" data-i18n="get_quote">Obtenir un devis</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero hero-gradient">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="availability-badge">
+            <span class="availability-dot"></span>
+            <span class="availability-text" data-i18n="available_24">Disponible 24/7</span>
+          </div>
+
+          <h1 class="hero-title" data-i18n="hero_title">Solutions Électroniques de Sécurité Professionnelles</h1>
+
+          <p class="hero-desc" data-i18n="hero_desc">
+            Solutions professionnelles de sécurité électronique à Tanger, Maroc. Installation, formation et service pour CCTV, contrôle d'accès, systèmes d'alarme et plus encore.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="hero-btn-primary" onclick="scrollToSection('#contact')">
+              <i class="fas fa-phone-alt"></i>
+              <span data-i18n="contact_us">Nous contacter</span>
+            </button>
+            <button class="hero-btn-secondary" onclick="scrollToSection('#services')">
+              <i class="fas fa-list"></i>
+              <span data-i18n="our_services">Nos services</span>
+            </button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-value">15+</div>
+              <div class="stat-label" data-i18n="years_exp">Années d'expérience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">500+</div>
+              <div class="stat-label" data-i18n="projects">Projets réalisés</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">24/7</div>
+              <div class="stat-label" data-i18n="support">Support</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="solutions-card float-shadow">
+            <h3 class="solutions-title" data-i18n="our_solutions">Nos Solutions</h3>
+            <div class="solutions-grid">
+              <div class="solution-item">
+                <div class="solution-icon"><i class="fas fa-camera"></i></div>
+                <h4 class="solution-title" data-i18n="cctv">Systèmes CCTV</h4>
+                <p class="solution-desc" data-i18n="cctv_desc">Surveillance HD</p>
+              </div>
+              <div class="solution-item">
+                <div class="solution-icon"><i class="fas fa-fingerprint"></i></div>
+                <h4 class="solution-title" data-i18n="access_control">Contrôle d'Accès</h4>
+                <p class="solution-desc" data-i18n="access_desc">Biométrique</p>
+              </div>
+              <div class="solution-item">
+                <div class="solution-icon"><i class="fas fa-bell"></i></div>
+                <h4 class="solution-title" data-i18n="alarm_systems">Systèmes d'Alarme</h4>
+                <p class="solution-desc" data-i18n="alarm_desc">Protection 24/7</p>
+              </div>
+              <div class="solution-item">
+                <div class="solution-icon"><i class="fas fa-wifi"></i></div>
+                <h4 class="solution-title" data-i18n="network_sec">Sécurité Réseau</h4>
+                <p class="solution-desc" data-i18n="network_desc">Infrastructure</p>
+              </div>
+            </div>
+
+            <div class="trust-badge">
+              <div class="trust-content">
+                <i class="fas fa-shield-alt trust-icon"></i>
+                <div>
+                  <div class="trust-title" data-i18n="certified">Certifié & Agréé</div>
+                  <div class="trust-desc" data-i18n="guarantee">Garantie de qualité</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        // ===========================================
-        // TRANSLATIONS
-        // ===========================================
-        const translations = {
-            fr: {
-                lang_code: "fr",
-                direction: "ltr",
-                home: "Accueil",
-                services: "Services",
-                about: "À propos",
-                contact: "Contact",
-                get_quote: "Obtenir un devis",
-                available_24: "Disponible 24/7",
-                hero_title: "Solutions Électroniques de Sécurité Professionnelles",
-                hero_desc: "Solutions professionnelles de sécurité électronique à Tanger, Maroc. Installation, formation et service pour CCTV, contrôle d'accès, systèmes d'alarme et plus encore.",
-                contact_us: "Nous contacter",
-                our_services: "Nos services",
-                years_exp: "Années d'expérience",
-                projects: "Projets réalisés",
-                support: "Support",
-                our_solutions: "Nos Solutions",
-                cctv: "Systèmes CCTV",
-                cctv_desc: "Surveillance HD",
-                access_control: "Contrôle d'Accès",
-                access_desc: "Biométrique",
-                alarm_systems: "Systèmes d'Alarme",
-                alarm_desc: "Protection 24/7",
-                network_sec: "Sécurité Réseau",
-                network_desc: "Infrastructure",
-                certified: "Certifié & Agréé",
-                guarantee: "Garantie de qualité",
-                what_we_offer: "Ce que nous offrons",
-                professional_services: "Nos Services Professionnels",
-                comprehensive_solutions: "Solutions de sécurité complètes adaptées à vos besoins",
-                installation: "Installation",
-                installation_desc: "Installation professionnelle de tous les systèmes de sécurité y compris CCTV, contrôle d'accès, systèmes d'alarme et interphones.",
-                site_assessment: "Évaluation et planification du site",
-                equipment_procurement: "Approvisionnement en équipement",
-                professional_install: "Installation professionnelle",
-                system_testing: "Test et mise en service",
-                training: "Formation",
-                training_desc: "Programmes de formation complets pour que votre personnel puisse utiliser et gérer efficacement les systèmes de sécurité.",
-                system_training: "Formation à l'utilisation du système",
-                maintenance: "Procédures de maintenance",
-                emergency: "Protocoles d'urgence",
-                refreshers: "Support continu",
-                service_maintenance: "Service & Maintenance",
-                service_desc: "Entretien régulier et réparation rapide pour garantir que vos systèmes de sécurité fonctionnent toujours.",
-                preventive: "Entretien préventif",
-                emergency_repairs: "Réparations d'urgence 24/7",
-                upgrades: "Mises à niveau du système",
-                remote_support: "Surveillance à distance",
-                about_us: "À propos de nous",
-                why_choose: "Pourquoi Choisir StandTech?",
-                why_desc: "Avec plus de 15 ans d'expérience dans l'industrie de l'électronique de sécurité, StandTech fournit des solutions fiables et professionnelles pour les clients résidentiels et commerciaux.",
-                certified_tech: "Techniciens Certifiés",
-                customer_satisfaction: "Satisfaction Client",
-                response_time: "Temps de Réponse",
-                expertise: "Notre Expertise",
-                intercom: "Interphones",
-                fire_detection: "Détection Incendie",
-                support_24: "Support 24/7 Disponible",
-                support_desc: "Les appels d'urgence sont traités dans les 30 minutes maximum",
-                get_in_touch: "Prenez contact",
-                contact_standtech: "Contactez StandTech",
-                contact_desc: "Prenez contact pour une consultation gratuite ou un devis",
-                send_message: "Envoyez-nous un message",
-                full_name: "Nom Complet",
-                email: "Email",
-                phone: "Téléphone",
-                service_needed: "Service Nécessaire",
-                select_service: "Sélectionnez un service",
-                message: "Message",
-                ask_quote: "Demander un Devis",
-                contact_info: "Informations de Contact",
-                our_location: "Notre Adresse",
-                phone_number: "Téléphone",
-                email_address: "Email",
-                business_hours: "Heures d'Ouverture",
-                monday_friday: "Lundi - Vendredi: 8h30 - 18h30",
-                saturday: "Samedi: 9h00 - 13h00",
-                emergency_service: "Service d'urgence: 24/7",
-                quick_response: "Garantie de Réponse Rapide",
-                response_guarantee: "Nous garantissons de répondre à toutes les demandes dans les 2 heures ouvrables.",
-                emergency_guarantee: "Urgences traitées en 30 min",
-                licensed_insured: "Fournisseur de services de sécurité agréé et assuré.",
-                quick_links: "Liens Rapides",
-                our_services_footer: "Nos Services",
-                cctv_install: "Installation CCTV",
-                access_control_systems: "Contrôle d'Accès",
-                security_training: "Formation",
-                system_maintenance: "Maintenance",
-                newsletter: "Newsletter",
-                subscribe: "Abonnez-vous pour des conseils de sécurité",
-                all_rights: "Tous droits réservés.",
-                quote_request_sent: "Demande envoyée!",
-                quote_confirmation: "Merci! Votre demande a été soumise. Nous vous contacterons dans les 24 heures.",
-                got_it: "Compris"
-            },
-            en: {
-                lang_code: "en",
-                direction: "ltr",
-                home: "Home",
-                services: "Services",
-                about: "About",
-                contact: "Contact",
-                get_quote: "Get Quote",
-                available_24: "Available 24/7",
-                hero_title: "Professional Security Electronics Solutions",
-                hero_desc: "Professional Security Electronics Solutions in Tanger, Morocco. Installation, Training & Service for CCTV, Access Control, Alarm Systems, and more.",
-                contact_us: "Contact Us",
-                our_services: "Our Services",
-                years_exp: "Years of experience",
-                projects: "Completed projects",
-                support: "Support",
-                our_solutions: "Our Solutions",
-                cctv: "CCTV Systems",
-                cctv_desc: "HD Surveillance",
-                access_control: "Access Control",
-                access_desc: "Biometric",
-                alarm_systems: "Alarm Systems",
-                alarm_desc: "24/7 Protection",
-                network_sec: "Network Security",
-                network_desc: "Infrastructure",
-                certified: "Certified & Licensed",
-                guarantee: "Quality guarantee",
-                what_we_offer: "What we offer",
-                professional_services: "Our Professional Services",
-                comprehensive_solutions: "Comprehensive security solutions tailored to your needs",
-                installation: "Installation",
-                installation_desc: "Professional installation of all security systems including CCTV, access control, alarm systems, and intercoms.",
-                site_assessment: "Site assessment & planning",
-                equipment_procurement: "Equipment procurement",
-                professional_install: "Professional installation",
-                system_testing: "System testing & commissioning",
-                training: "Training",
-                training_desc: "Comprehensive training programs for your staff to effectively use and manage security systems.",
-                system_training: "System operation training",
-                maintenance: "Maintenance procedures",
-                emergency: "Emergency protocols",
-                refreshers: "Ongoing support",
-                service_maintenance: "Service & Maintenance",
-                service_desc: "Regular maintenance and prompt repair services to ensure your security systems are always operational.",
-                preventive: "Preventive maintenance",
-                emergency_repairs: "24/7 emergency repairs",
-                upgrades: "System upgrades",
-                remote_support: "Remote monitoring",
-                about_us: "About us",
-                why_choose: "Why Choose StandTech?",
-                why_desc: "With over 15 years of experience in the security electronics industry, StandTech provides reliable, professional solutions for residential and commercial clients.",
-                certified_tech: "Certified Technicians",
-                customer_satisfaction: "Customer Satisfaction",
-                response_time: "Response Time",
-                expertise: "Our Expertise",
-                intercom: "Intercom Systems",
-                fire_detection: "Fire Detection",
-                support_24: "24/7 Support Available",
-                support_desc: "Emergency calls answered within 30 minutes",
-                get_in_touch: "Get in touch",
-                contact_standtech: "Contact StandTech",
-                contact_desc: "Get in touch for a free consultation or quote",
-                send_message: "Send us a Message",
-                full_name: "Full Name",
-                email: "Email",
-                phone: "Phone",
-                service_needed: "Service Needed",
-                select_service: "Select a service",
-                message: "Message",
-                ask_quote: "Request Quote",
-                contact_info: "Contact Information",
-                our_location: "Our Location",
-                phone_number: "Phone",
-                email_address: "Email",
-                business_hours: "Business Hours",
-                monday_friday: "Monday - Friday: 8:30 AM - 6:30 PM",
-                saturday: "Saturday: 9:00 AM - 1:00 PM",
-                emergency_service: "Emergency Service: 24/7",
-                quick_response: "Quick Response Guarantee",
-                response_guarantee: "We guarantee to respond to all inquiries within 2 business hours.",
-                emergency_guarantee: "Emergencies handled in 30 min",
-                licensed_insured: "Licensed & Insured Security Electronics Provider.",
-                quick_links: "Quick Links",
-                our_services_footer: "Our Services",
-                cctv_install: "CCTV Installation",
-                access_control_systems: "Access Control",
-                security_training: "Training",
-                system_maintenance: "Maintenance",
-                newsletter: "Newsletter",
-                subscribe: "Subscribe for security tips",
-                all_rights: "All rights reserved.",
-                quote_request_sent: "Request Sent!",
-                quote_confirmation: "Thank you! Your request has been submitted. We will contact you within 24 hours.",
-                got_it: "Got it"
-            },
-            ar: {
-                lang_code: "ar",
-                direction: "rtl",
-                home: "الرئيسية",
-                services: "الخدمات",
-                about: "عن الشركة",
-                contact: "اتصل بنا",
-                get_quote: "طلب عرض سعر",
-                available_24: "متاح 24/7",
-                hero_title: "حلول إلكترونية أمنية احترافية",
-                hero_desc: "حلول إلكترونية أمنية احترافية في طنجة، المغرب. التثبيت والتدريب والصيانة لأنظمة المراقبة والتحكم في الوصول وأنظمة الإنذار.",
-                contact_us: "اتصل بنا",
-                our_services: "خدماتنا",
-                years_exp: "سنوات الخبرة",
-                projects: "مشاريع منجزة",
-                support: "الدعم",
-                our_solutions: "حلولنا",
-                cctv: "أنظمة المراقبة",
-                cctv_desc: "مراقبة عالية الدقة",
-                access_control: "التحكم في الوصول",
-                access_desc: "بصمة الإصبع",
-                alarm_systems: "أنظمة الإنذار",
-                alarm_desc: "حماية 24/7",
-                network_sec: "أمن الشبكات",
-                network_desc: "البنية التحتية",
-                certified: "معتمد ومرخص",
-                guarantee: "ضمان الجودة",
-                what_we_offer: "ما نقدمه",
-                professional_services: "خدماتنا المهنية",
-                comprehensive_solutions: "حلول أمنية شاملة مصممة لتلبية احتياجاتك",
-                installation: "التثبيت",
-                installation_desc: "تثبيت احترافي لجميع أنظمة الأمان بما في ذلك أنظمة المراقبة والتحكم في الوصول وأنظمة الإنذار.",
-                site_assessment: "تقييم وتخطيط الموقع",
-                equipment_procurement: "توريد المعدات",
-                professional_install: "التثبيت الاحترافي",
-                system_testing: "اختبار وتشغيل النظام",
-                training: "التدريب",
-                training_desc: "برامج تدريبية شاملة لموظفيك لاستخدام وإدارة أنظمة الأمان بفعالية.",
-                system_training: "التدريب على تشغيل النظام",
-                maintenance: "إجراءات الصيانة",
-                emergency: "بروتوكولات الطوارئ",
-                refreshers: "الدعم المستمر",
-                service_maintenance: "الخدمة والصيانة",
-                service_desc: "صيانة دورية وخدمات إصلاح سريعة لضمان عمل أنظمة الأمان دائماً.",
-                preventive: "الصيانة الوقائية",
-                emergency_repairs: "إصلاحات طوارئ 24/7",
-                upgrades: "تحديثات النظام",
-                remote_support: "المراقبة عن بعد",
-                about_us: "من نحن",
-                why_choose: "لماذا تختار ستاند تيك؟",
-                why_desc: "مع أكثر من 15 عاماً من الخبرة في مجال الإلكترونيات الأمنية، تقدم ستاند تيك حلولاً موثوقة واحترافية للعملاء السكنيين والتجاريين.",
-                certified_tech: "فنيون معتمدون",
-                customer_satisfaction: "رضا العملاء",
-                response_time: "وقت الاستجابة",
-                expertise: "خبرتنا",
-                intercom: "أنظمة الاتصال الداخلي",
-                fire_detection: "كشف الحرائق",
-                support_24: "دعم متاح 24/7",
-                support_desc: "الرد على مكالمات الطوارئ خلال 30 دقيقة",
-                get_in_touch: "تواصل معنا",
-                contact_standtech: "اتصل بـ StandTech",
-                contact_desc: "تواصل معنا للحصول على استشارة مجانية أو عرض سعر",
-                send_message: "أرسل لنا رسالة",
-                full_name: "الاسم الكامل",
-                email: "البريد الإلكتروني",
-                phone: "الهاتف",
-                service_needed: "الخدمة المطلوبة",
-                select_service: "اختر خدمة",
-                message: "الرسالة",
-                ask_quote: "طلب عرض سعر",
-                contact_info: "معلومات الاتصال",
-                our_location: "موقعنا",
-                phone_number: "الهاتف",
-                email_address: "البريد الإلكتروني",
-                business_hours: "ساعات العمل",
-                monday_friday: "الإثنين - الجمعة: 8:30 - 18:30",
-                saturday: "السبت: 9:00 - 13:00",
-                emergency_service: "خدمة الطوارئ: 24/7",
-                quick_response: "ضمان الاستجابة السريعة",
-                response_guarantee: "نضمن الرد على جميع الاستفسارات خلال ساعتين عمل.",
-                emergency_guarantee: "الطوارئ خلال 30 دقيقة",
-                licensed_insured: "مزود خدمات إلكترونيات أمنية مرخص ومؤمن.",
-                quick_links: "روابط سريعة",
-                our_services_footer: "خدماتنا",
-                cctv_install: "تثبيت أنظمة المراقبة",
-                access_control_systems: "التحكم في الوصول",
-                security_training: "التدريب",
-                system_maintenance: "الصيانة",
-                newsletter: "النشرة الإخبارية",
-                subscribe: "اشترك للحصول على نصائح أمنية",
-                all_rights: "جميع الحقوق محفوظة.",
-                quote_request_sent: "تم إرسال الطلب!",
-                quote_confirmation: "شكراً! تم تقديم طلبك. سنتصل بك خلال 24 ساعة.",
-                got_it: "حسناً"
-            }
-        };
+    <div class="scroll-indicator">
+      <a href="#services" onclick="event.preventDefault(); scrollToSection('#services');">
+        <i class="fas fa-chevron-down animate-bounce-slow" style="font-size: 1.5rem;"></i>
+      </a>
+    </div>
+  </section>
 
-        // Current language
-        let currentLang = localStorage.getItem('standtech-lang') || 'fr';
+  <!-- Services Section -->
+  <section id="services" class="section section-bg-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="what_we_offer">Ce que nous offrons</span>
+        <h2 class="section-title" data-i18n="professional_services">Nos Services Professionnels</h2>
+        <p class="section-desc" data-i18n="comprehensive_solutions">Solutions de sécurité complètes adaptées à vos besoins</p>
+      </div>
 
-        // ===========================================
-        // LANGUAGE FUNCTIONS
-        // ===========================================
-        function changeLanguage(lang) {
-            if (!translations[lang]) return;
-            
-            currentLang = lang;
-            localStorage.setItem('standtech-lang', lang);
-            applyLanguage(lang);
-            
-            // Update active language button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
-                }
-            });
-        }
+      <div class="services-grid">
+        <!-- Installation -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&h=600&fit=crop" alt="Installation">
+          </div>
+          <div class="service-content">
+            <div class="service-icon-wrapper"><i class="fas fa-tools" style="font-size: 1.5rem;"></i></div>
+            <h3 class="service-card-title" data-i18n="installation">Installation</h3>
+            <p class="service-card-desc" data-i18n="installation_desc">
+              Installation professionnelle de tous les systèmes de sécurité y compris CCTV, contrôle d'accès, systèmes d'alarme et interphones.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i><span data-i18n="site_assessment">Évaluation et planification du site</span></li>
+              <li><i class="fas fa-check-circle"></i><span data-i18n="equipment_procurement">Approvisionnement en équipement</span></li>
+              <li><i class="fas fa-check-circle"></i><span data-i18n="professional_install">Installation professionnelle</span></li>
+              <li><i class="fas fa-check-circle"></i><span data-i18n="system_testing">Test et mise en service</span></li>
+            </ul>
+          </div>
+        </div>
 
-        function applyLanguage(lang) {
-            const t = translations[lang];
-            if (!t) return;
-            
-            // Update direction for RTL
-            document.documentElement.lang = t.lang_code;
-            document.documentElement.dir = t.direction;
-            
-            // Update title
-            document.title = `StandTech - ${t.hero_title}`;
-            
-            // Update all translatable elements
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (t[key]) {
-                    el.innerHTML = t[key];
-                }
-            });
-        }
+        <!-- Training -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop" alt="Training">
+          </div>
+          <div class="service-content">
+            <div class="service-icon-wrapper"><i class="fas fa-chalkboard-teacher" style="font-size: 1.5rem;"></i></div>
+            <h3 class="service-card-title" data-i18n="training">Formation</h3>
+            <p class="service-card-desc" data-i18n="training_desc">
+              Programmes de formation complets pour que votre personnel puisse utiliser et gérer efficacement les systèmes de sécurité.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i><span data-i18n="system_training">Formation à l'utilisation du système</span></li>
+              <li><i class="fas fa-check-circle"></i><span data-i18n="maintenance">Procédures de maintenance</span></li>
+              <li><i class="fas fa-check-circle"></i><span data-i18n="emergency">Protocoles d'urgence</span></li>
+              <li><i class="fas fa-check-circle"></i><span data-i18n="refreshers">Support continu</span></li>
+            </ul>
+          </div>
+        </div>
 
-        // ===========================================
-        // DARK MODE
-        // ===========================================
-        function initDarkMode() {
-            const darkMode = localStorage.getItem('standtech-dark') === 'true';
-            if (darkMode) {
-                document.documentElement.classList.add('dark');
-            }
-        }
+        <!-- Service & Maintenance -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Maintenance">
+          </div>
+          <div class="service-content">
+            <div class="service-icon-wrapper"><i class="fas fa-cogs" style="font-size: 1.5rem;"></i></div>
+            <h3 class="service-card-title" data-i18n="service_maintenance">Service & Maintenance</h3>
+            <p class="service-card-desc" data-i18n="service_desc">
+              Entretien régulier et réparation rapide pour garantir que vos systèmes de sécurité fonctionnent toujours.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i><span data-i18n="preventive">Entretien préventif</span></li>
+              <li><i class="fas fa-check-circle"></i><span data-i18n="emergency_repairs">Réparations d'urgence 24/7</span></li>
+              <li><i class="fas fa-check-circle"></i><span data-i18n="upgrades">Mises à niveau du système</span></li>
+              <li><i class="fas fa-check-circle"></i><span data-i18n="remote_support">Surveillance à distance</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-        function toggleDarkMode() {
-            document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('standtech-dark', isDark);
-        }
+    </div>
+  </section>
 
-        // ===========================================
-        // MOBILE MENU
-        // ===========================================
-        function initMobileMenu() {
-            const menuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                const icon = menuBtn.querySelector('i');
-                if (mobileMenu.classList.contains('hidden')) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                } else {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                }
-            });
-            
-            // Close menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    menuBtn.querySelector('i').classList.remove('fa-times');
-                    menuBtn.querySelector('i').classList.add('fa-bars');
-                });
-            });
-        }
+  <!-- Partners Section (NEW) -->
+  <section id="partners" class="section section-bg-gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="partners_badge">Nos partenaires</span>
+        <h2 class="section-title" data-i18n="partners_title">Marques & Partenaires</h2>
+        <p class="section-desc" data-i18n="partners_desc">Nous travaillons avec des marques reconnues pour assurer qualité et fiabilité.</p>
+      </div>
 
-        // ===========================================
-        // NAVBAR SCROLL EFFECT
-        // ===========================================
-        function initNavbarScroll() {
-            const navbar = document.getElementById('navbar');
-            
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('shadow-xl', 'backdrop-blur-lg', 'bg-white/95', 'dark:bg-gray-800/95');
-                } else {
-                    navbar.classList.remove('shadow-xl', 'backdrop-blur-lg', 'bg-white/95', 'dark:bg-gray-800/95');
-                }
-                
-                // Highlight active nav link
-                const sections = document.querySelectorAll('section');
-                const navLinks = document.querySelectorAll('.nav-link');
-                
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100;
-                    if (window.scrollY >= sectionTop) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('nav-active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('nav-active');
-                    }
-                });
-            });
-        }
+      <div class="partners-grid">
+        <div class="partner-card" title="ZKTeco">
+          <img class="partner-logo" src="https://kver.ma/img/cms/Logos/ZKTECO-LOGO.png" alt="ZKTeco logo" loading="lazy">
+        </div>
+        <div class="partner-card" title="Dahua">
+          <img class="partner-logo" src="https://kver.ma/img/cms/Logos/Dahua.png" alt="Dahua logo" loading="lazy">
+        </div>
+        <div class="partner-card" title="Hikvision">
+          <img class="partner-logo" src="https://p7.hiclipart.com/preview/207/764/38/logo-brand-hikvision-product-trademark-cctv-logo.jpg" alt="Hikvision logo" loading="lazy">
+        </div>
+        <div class="partner-card" title="Ajax Systems">
+          <img class="partner-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Ajax_system.png" alt="Ajax Systems logo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // ===========================================
-        // SMOOTH SCROLL
-        // ===========================================
-        function initSmoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const target = document.querySelector(targetId);
-                    if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        }
+  <!-- About Section -->
+  <section id="about" class="section section-bg-gray">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-left">
+          <span class="section-badge" data-i18n="about_us">À propos de nous</span>
+          <h2 class="about-title" data-i18n="why_choose">Pourquoi Choisir StandTech?</h2>
+          <p class="about-desc" data-i18n="why_desc">
+            Avec plus de 15 ans d'expérience dans l'industrie de l'électronique de sécurité, StandTech fournit des solutions fiables et professionnelles pour les clients résidentiels et commerciaux.
+          </p>
 
-        // ===========================================
-        // FORMS
-        // ===========================================
-        function initForms() {
-            // Contact Form
-            document.getElementById('contactForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                
-                if (!name || !email || !phone) {
-                    alert('Please fill in all required fields');
-                    return;
-                }
-                
-                // Show success popup
-                document.getElementById('successPopup').classList.remove('hidden');
-                this.reset();
-            });
-            
-            // Newsletter Form
-            document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const email = document.getElementById('newsletterEmail').value;
-                if (!email) {
-                    alert('Please enter your email');
-                    return;
-                }
-                
-                document.getElementById('successPopup').classList.remove('hidden');
-                this.reset();
-            });
-            
-            // Close Popup
-            document.getElementById('closePopup').addEventListener('click', () => {
-                document.getElementById('successPopup').classList.add('hidden');
-            });
-            
-            // Close popup when clicking outside
-            document.getElementById('successPopup').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    this.classList.add('hidden');
-                }
-            });
-        }
+          <div class="skills">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-label" data-i18n="certified_tech">Techniciens Certifiés</span>
+                <span class="skill-value">95%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-label" data-i18n="customer_satisfaction">Satisfaction Client</span>
+                <span class="skill-value">98%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar" style="width: 98%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-label" data-i18n="response_time">Temps de Réponse</span>
+                <span class="skill-value">90%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar" style="width: 90%;"></div></div>
+            </div>
+          </div>
+        </div>
 
-        // ===========================================
-        // INITIALIZE
-        // ===========================================
-        document.addEventListener('DOMContentLoaded', function() {
-            initDarkMode();
-            applyLanguage(currentLang);
-            initMobileMenu();
-            initNavbarScroll();
-            initSmoothScroll();
-            initForms();
-            
-            // Dark mode toggle buttons
-            document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
-            document.getElementById('darkModeToggleMobile').addEventListener('click', toggleDarkMode);
-            
-            // Highlight current language
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.dataset.lang === currentLang) {
-                    btn.classList.add('bg-blue-100', 'dark:bg-blue-900', 'text-blue-600');
-                }
-            });
+        <div class="about-right">
+          <div class="expertise-card">
+            <h3 class="expertise-title" data-i18n="expertise">Notre Expertise</h3>
+            <div class="expertise-grid">
+              <div class="expertise-item"><i class="fas fa-check-circle"></i><span data-i18n="cctv">Systèmes CCTV</span></div>
+              <div class="expertise-item"><i class="fas fa-check-circle"></i><span data-i18n="access_control">Contrôle d'Accès</span></div>
+              <div class="expertise-item"><i class="fas fa-check-circle"></i><span data-i18n="alarm_systems">Systèmes d'Alarme</span></div>
+              <div class="expertise-item"><i class="fas fa-check-circle"></i><span data-i18n="intercom">Interphones</span></div>
+              <div class="expertise-item"><i class="fas fa-check-circle"></i><span data-i18n="fire_detection">Détection Incendie</span></div>
+              <div class="expertise-item"><i class="fas fa-check-circle"></i><span data-i18n="network_sec">Sécurité Réseau</span></div>
+            </div>
+
+            <div class="support-banner">
+              <div class="support-content">
+                <div class="support-icon"><i class="fas fa-headset"></i></div>
+                <div>
+                  <h4 class="support-title" data-i18n="support_24">Support 24/7 Disponible</h4>
+                  <p class="support-desc" data-i18n="support_desc">Les appels d'urgence sont traités dans les 30 minutes maximum</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section-bg-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="get_in_touch">Prenez contact</span>
+        <h2 class="section-title" data-i18n="contact_standtech">Contactez StandTech</h2>
+        <p class="section-desc" data-i18n="contact_desc">Prenez contact pour une consultation gratuite ou un devis</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <h3 class="contact-form-title" data-i18n="send_message">Envoyez-nous un message</h3>
+          <form action="https://formspree.io/f/maqjqbrl" method="POST" class="form">
+            <input type="hidden" name="_subject" value="Nouvelle demande de devis - StandTech">
+            <div class="form-row">
+              <div class="form-group">
+                <label><span data-i18n="full_name">Nom Complet</span> <span class="required">*</span></label>
+                <input type="text" name="name" required class="form-input">
+              </div>
+              <div class="form-group">
+                <label><span data-i18n="email">Email</span> <span class="required">*</span></label>
+                <input type="email" name="email" required class="form-input">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label><span data-i18n="phone">Téléphone</span> <span class="required">*</span></label>
+                <input type="tel" name="phone" required placeholder="+212 6 35 50 91 60" class="form-input">
+              </div>
+              <div class="form-group">
+                <label data-i18n="service_needed">Service Nécessaire</label>
+                <select name="service" class="form-select" id="serviceSelect">
+                  <option value="" data-i18n="select_service">Sélectionnez un service</option>
+                  <option value="installation" data-i18n="installation">Installation</option>
+                  <option value="training" data-i18n="training">Formation</option>
+                  <option value="maintenance" data-i18n="service_maintenance">Service & Maintenance</option>
+                  <option value="consultation" data-i18n="about">À propos</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="message">Message</label>
+              <textarea name="message" rows="4" placeholder="Décrivez vos besoins en sécurité..." class="form-textarea"></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              <i class="fas fa-paper-plane"></i>
+              <span data-i18n="ask_quote">Demander un Devis</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="contact-info-title" data-i18n="contact_info">Informations de Contact</h3>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-map-marker-alt" style="font-size: 1.25rem;"></i></div>
+              <div>
+                <h4 class="contact-item-title" data-i18n="our_location">Notre Adresse</h4>
+                <p class="contact-item-text">BELLE VUE RUE 71 N 9 1ERE ETAGE N 2</p>
+                <p class="contact-item-text">90000 TANGER, Morocco</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-phone" style="font-size: 1.25rem;"></i></div>
+              <div>
+                <h4 class="contact-item-title" data-i18n="phone_number">Téléphone</h4>
+                <p class="contact-item-text">0635 509 160</p>
+                <p class="contact-item-sub">24/7 Emergency: 0635 509 160</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-envelope" style="font-size: 1.25rem;"></i></div>
+              <div>
+                <h4 class="contact-item-title" data-i18n="email_address">Email</h4>
+                <p class="contact-item-text">standtechkamal@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-clock" style="font-size: 1.25rem;"></i></div>
+              <div>
+                <h4 class="contact-item-title" data-i18n="business_hours">Heures d'Ouverture</h4>
+                <p class="contact-item-text" data-i18n="monday_friday">Lundi - Vendredi: 8h30 - 18h30</p>
+                <p class="contact-item-text" data-i18n="saturday">Samedi: 9h00 - 13h00</p>
+                <p class="contact-item-text" data-i18n="emergency_service">Service d'urgence: 24/7</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="response-banner">
+            <h4 class="response-title" data-i18n="quick_response">Garantie de Réponse Rapide</h4>
+            <p class="response-desc" data-i18n="response_guarantee">Nous garantissons de répondre à toutes les demandes dans les 2 heures ouvrables.</p>
+            <div class="response-highlight">
+              <i class="fas fa-bolt"></i>
+              <span data-i18n="emergency_guarantee">Urgences traitées en 30 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW INFO PROMO CARD -->
+      <div class="promo-card">
+        <div class="promo-title" data-i18n="promo_title">Greetings from Stadtech Services!</div>
+
+        <ul class="promo-list">
+          <li data-i18n="promo_li_1">Software Licensing & Activation</li>
+          <li data-i18n="promo_li_2">Access Control Systems (ZKTeco, Hikvision)</li>
+          <li data-i18n="promo_li_3">Hotel Smart Locks (ZKTeco, Dahua)</li>
+          <li data-i18n="promo_li_4">CCTV Surveillance Solutions (Dahua, Hikvision, Uniview)</li>
+          <li data-i18n="promo_li_5">Smart Parking Solutions (Hikvision, ZKTeco)</li>
+        </ul>
+
+        <div class="promo-badges">
+          <span class="promo-badge" data-i18n="promo_badge_1">✅ Authorized partners</span>
+          <span class="promo-badge" data-i18n="promo_badge_2">✅ End-to-end service</span>
+          <span class="promo-badge" data-i18n="promo_badge_3">✅ Customized solutions</span>
+          <span class="promo-badge" data-i18n="promo_badge_4">✅ Competitive pricing</span>
+          <span class="promo-badge" data-i18n="promo_badge_5">✅ 24/7 support</span>
+        </div>
+
+        <div class="promo-cta-row">
+          <div class="promo-cta-links">
+            <a href="https://standtech.access.ly" target="_blank" rel="noopener noreferrer">🌐 standtech.access.ly</a>
+            <a href="mailto:stndtechkamal@gmail.com">📧 stndtechkamal@gmail.com</a>
+            <a href="https://wa.me/212635509160" target="_blank" rel="noopener noreferrer">📱 WhatsApp: +212635509160</a>
+          </div>
+          <button class="cta-btn" onclick="scrollToSection('#contact')" data-i18n="promo_cta_btn">Reply “CALL ME”</button>
+        </div>
+
+        <p style="margin-top:1rem;color:var(--gray-600);" data-i18n="promo_warranty">
+          All installations include a 2-year warranty + 3 months free maintenance.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Company Info -->
+        <div>
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i class="fas fa-shield-alt"></i></div>
+            <span class="footer-logo-text">Stand<span>Tech</span></span>
+          </div>
+          <p class="footer-desc" data-i18n="licensed_insured">Fournisseur de services de sécurité agréé et assuré.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Standtechma" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/standtech.ma/" target="_blank" rel="noopener noreferrer" class="social-link instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@StandTech" target="_blank" rel="noopener noreferrer" class="social-link youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/212635509160" target="_blank" rel="noopener noreferrer" class="social-link whatsapp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-title" data-i18n="quick_links">Liens Rapides</h4>
+          <ul class="footer-links">
+            <li><button onclick="scrollToSection('#home')" data-i18n="home">Accueil</button></li>
+            <li><button onclick="scrollToSection('#services')" data-i18n="services">Services</button></li>
+            <li><button onclick="scrollToSection('#partners')" data-i18n="partners_nav">Partenaires</button></li>
+            <li><button onclick="scrollToSection('#about')" data-i18n="about">À propos</button></li>
+            <li><button onclick="scrollToSection('#contact')" data-i18n="contact">Contact</button></li>
+          </ul>
+        </div>
+
+        <!-- Our Services -->
+        <div>
+          <h4 class="footer-title" data-i18n="our_services_footer">Nos Services</h4>
+          <ul class="footer-links">
+            <li><button onclick="scrollToSection('#services')" data-i18n="cctv_install">Installation CCTV</button></li>
+            <li><button onclick="scrollToSection('#services')" data-i18n="access_control_systems">Contrôle d'Accès</button></li>
+            <li><button onclick="scrollToSection('#services')" data-i18n="security_training">Formation</button></li>
+            <li><button onclick="scrollToSection('#services')" data-i18n="system_maintenance">Maintenance</button></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="footer-title" data-i18n="newsletter">Newsletter</h4>
+          <p class="newsletter-desc" data-i18n="subscribe">Abonnez-vous pour des conseils de sécurité</p>
+          <form action="https://formspree.io/f/maqjqbrl" method="POST" class="newsletter-form">
+            <input type="hidden" name="_subject" value="Nouvelle inscription newsletter - StandTech">
+            <input type="hidden" name="message" value="Nouvelle demande d'abonnement à la newsletter.">
+            <input type="email" name="email" placeholder="Votre email" required class="newsletter-input">
+            <button type="submit" class="newsletter-submit">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 StandTech. <span data-i18n="all_rights">Tous droits réservés.</span></p>
+        <p style="margin-top: 0.5rem;" data-i18n="licensed_insured">Fournisseur de services de sécurité agréé et assuré.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="floating-whatsapp">
+    <a href="https://wa.me/212635509160" target="_blank" rel="noopener noreferrer" class="whatsapp-btn animate-bounce-slow">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="whatsapp-badge animate-pulse-slow">1</div>
+  </div>
+
+  <script>
+    // Translations
+    const translations = {
+      fr: {
+        lang_code: "fr",
+        direction: "ltr",
+        home: "Accueil",
+        services: "Services",
+        partners_nav: "Partenaires",
+        about: "À propos",
+        contact: "Contact",
+        get_quote: "Obtenir un devis",
+        available_24: "Disponible 24/7",
+        hero_title: "Solutions Électroniques de Sécurité Professionnelles",
+        hero_desc: "Solutions professionnelles de sécurité électronique à Tanger, Maroc. Installation, formation et service pour CCTV, contrôle d'accès, systèmes d'alarme et plus encore.",
+        contact_us: "Nous contacter",
+        our_services: "Nos services",
+        years_exp: "Années d'expérience",
+        projects: "Projets réalisés",
+        support: "Support",
+        our_solutions: "Nos Solutions",
+        cctv: "Systèmes CCTV",
+        cctv_desc: "Surveillance HD",
+        access_control: "Contrôle d'Accès",
+        access_desc: "Biométrique",
+        alarm_systems: "Systèmes d'Alarme",
+        alarm_desc: "Protection 24/7",
+        network_sec: "Sécurité Réseau",
+        network_desc: "Infrastructure",
+        certified: "Certifié & Agréé",
+        guarantee: "Garantie de qualité",
+        what_we_offer: "Ce que nous offrons",
+        professional_services: "Nos Services Professionnels",
+        comprehensive_solutions: "Solutions de sécurité complètes adaptées à vos besoins",
+        installation: "Installation",
+        installation_desc: "Installation professionnelle de tous les systèmes de sécurité y compris CCTV, contrôle d'accès, systèmes d'alarme et interphones.",
+        site_assessment: "Évaluation et planification du site",
+        equipment_procurement: "Approvisionnement en équipement",
+        professional_install: "Installation professionnelle",
+        system_testing: "Test et mise en service",
+        training: "Formation",
+        training_desc: "Programmes de formation complets pour que votre personnel puisse utiliser et gérer efficacement les systèmes de sécurité.",
+        system_training: "Formation à l'utilisation du système",
+        maintenance: "Procédures de maintenance",
+        emergency: "Protocoles d'urgence",
+        refreshers: "Support continu",
+        service_maintenance: "Service & Maintenance",
+        service_desc: "Entretien régulier et réparation rapide pour garantir que vos systèmes de sécurité fonctionnent toujours.",
+        preventive: "Entretien préventif",
+        emergency_repairs: "Réparations d'urgence 24/7",
+        upgrades: "Mises à niveau du système",
+        remote_support: "Surveillance à distance",
+        about_us: "À propos de nous",
+        why_choose: "Pourquoi Choisir StandTech?",
+        why_desc: "Avec plus de 15 ans d'expérience dans l'industrie de l'électronique de sécurité, StandTech fournit des solutions fiables et professionnelles pour les clients résidentiels et commerciaux.",
+        certified_tech: "Techniciens Certifiés",
+        customer_satisfaction: "Satisfaction Client",
+        response_time: "Temps de Réponse",
+        expertise: "Notre Expertise",
+        intercom: "Interphones",
+        fire_detection: "Détection Incendie",
+        support_24: "Support 24/7 Disponible",
+        support_desc: "Les appels d'urgence sont traités dans les 30 minutes maximum",
+        get_in_touch: "Prenez contact",
+        contact_standtech: "Contactez StandTech",
+        contact_desc: "Prenez contact pour une consultation gratuite ou un devis",
+        send_message: "Envoyez-nous un message",
+        full_name: "Nom Complet",
+        email: "Email",
+        phone: "Téléphone",
+        service_needed: "Service Nécessaire",
+        select_service: "Sélectionnez un service",
+        message: "Message",
+        ask_quote: "Demander un Devis",
+        contact_info: "Informations de Contact",
+        our_location: "Notre Adresse",
+        phone_number: "Téléphone",
+        email_address: "Email",
+        business_hours: "Heures d'Ouverture",
+        monday_friday: "Lundi - Vendredi: 8h30 - 18h30",
+        saturday: "Samedi: 9h00 - 13h00",
+        emergency_service: "Service d'urgence: 24/7",
+        quick_response: "Garantie de Réponse Rapide",
+        response_guarantee: "Nous garantissons de répondre à toutes les demandes dans les 2 heures ouvrables.",
+        emergency_guarantee: "Urgences traitées en 30 min",
+        licensed_insured: "Fournisseur de services de sécurité agréé et assuré.",
+        quick_links: "Liens Rapides",
+        our_services_footer: "Nos Services",
+        cctv_install: "Installation CCTV",
+        access_control_systems: "Contrôle d'Accès",
+        security_training: "Formation",
+        system_maintenance: "Maintenance",
+        newsletter: "Newsletter",
+        subscribe: "Abonnez-vous pour des conseils de sécurité",
+        all_rights: "Tous droits réservés.",
+
+        // NEW: Partners section
+        partners_badge: "Nos partenaires",
+        partners_title: "Marques & Partenaires",
+        partners_desc: "Nous travaillons avec des marques reconnues pour assurer qualité et fiabilité.",
+
+        // NEW: Promo content
+        promo_title: "Greetings from Stadtech Services!",
+        promo_li_1: "Licences & activation logiciels",
+        promo_li_2: "Contrôle d'accès (ZKTeco, Hikvision)",
+        promo_li_3: "Serrures intelligentes hôtelières (ZKTeco, Dahua)",
+        promo_li_4: "Vidéosurveillance CCTV (Dahua, Hikvision, Uniview)",
+        promo_li_5: "Solutions parking intelligent (Hikvision, ZKTeco)",
+        promo_badge_1: "✅ Partenaires autorisés",
+        promo_badge_2: "✅ Service de bout en bout",
+        promo_badge_3: "✅ Solutions sur mesure",
+        promo_badge_4: "✅ Prix compétitifs",
+        promo_badge_5: "✅ Support 24/7",
+        promo_cta_btn: "Répondre “CALL ME”",
+        promo_warranty: "Toutes les installations incluent une garantie 2 ans + 3 mois de maintenance gratuite."
+      },
+
+      en: {
+        lang_code: "en",
+        direction: "ltr",
+        home: "Home",
+        services: "Services",
+        partners_nav: "Partners",
+        about: "About",
+        contact: "Contact",
+        get_quote: "Get Quote",
+        available_24: "Available 24/7",
+        hero_title: "Professional Security Electronics Solutions",
+        hero_desc: "Professional Security Electronics Solutions in Tanger, Morocco. Installation, Training & Service for CCTV, Access Control, Alarm Systems, and more.",
+        contact_us: "Contact Us",
+        our_services: "Our Services",
+        years_exp: "Years of experience",
+        projects: "Completed projects",
+        support: "Support",
+        our_solutions: "Our Solutions",
+        cctv: "CCTV Systems",
+        cctv_desc: "HD Surveillance",
+        access_control: "Access Control",
+        access_desc: "Biometric",
+        alarm_systems: "Alarm Systems",
+        alarm_desc: "24/7 Protection",
+        network_sec: "Network Security",
+        network_desc: "Infrastructure",
+        certified: "Certified & Licensed",
+        guarantee: "Quality guarantee",
+        what_we_offer: "What we offer",
+        professional_services: "Our Professional Services",
+        comprehensive_solutions: "Comprehensive security solutions tailored to your needs",
+        installation: "Installation",
+        installation_desc: "Professional installation of all security systems including CCTV, access control, alarm systems, and intercoms.",
+        site_assessment: "Site assessment & planning",
+        equipment_procurement: "Equipment procurement",
+        professional_install: "Professional installation",
+        system_testing: "System testing & commissioning",
+        training: "Training",
+        training_desc: "Comprehensive training programs for your staff to effectively use and manage security systems.",
+        system_training: "System operation training",
+        maintenance: "Maintenance procedures",
+        emergency: "Emergency protocols",
+        refreshers: "Ongoing support",
+        service_maintenance: "Service & Maintenance",
+        service_desc: "Regular maintenance and prompt repair services to ensure your security systems are always operational.",
+        preventive: "Preventive maintenance",
+        emergency_repairs: "24/7 emergency repairs",
+        upgrades: "System upgrades",
+        remote_support: "Remote monitoring",
+        about_us: "About us",
+        why_choose: "Why Choose StandTech?",
+        why_desc: "With over 15 years of experience in the security electronics industry, StandTech provides reliable, professional solutions for residential and commercial clients.",
+        certified_tech: "Certified Technicians",
+        customer_satisfaction: "Customer Satisfaction",
+        response_time: "Response Time",
+        expertise: "Our Expertise",
+        intercom: "Intercom Systems",
+        fire_detection: "Fire Detection",
+        support_24: "24/7 Support Available",
+        support_desc: "Emergency calls answered within 30 minutes",
+        get_in_touch: "Get in touch",
+        contact_standtech: "Contact StandTech",
+        contact_desc: "Get in touch for a free consultation or quote",
+        send_message: "Send us a Message",
+        full_name: "Full Name",
+        email: "Email",
+        phone: "Phone",
+        service_needed: "Service Needed",
+        select_service: "Select a service",
+        message: "Message",
+        ask_quote: "Request Quote",
+        contact_info: "Contact Information",
+        our_location: "Our Location",
+        phone_number: "Phone",
+        email_address: "Email",
+        business_hours: "Business Hours",
+        monday_friday: "Monday - Friday: 8:30 AM - 6:30 PM",
+        saturday: "Saturday: 9:00 AM - 1:00 PM",
+        emergency_service: "Emergency Service: 24/7",
+        quick_response: "Quick Response Guarantee",
+        response_guarantee: "We guarantee to respond to all inquiries within 2 business hours.",
+        emergency_guarantee: "Emergencies handled in 30 min",
+        licensed_insured: "Licensed & Insured Security Electronics Provider.",
+        quick_links: "Quick Links",
+        our_services_footer: "Our Services",
+        cctv_install: "CCTV Installation",
+        access_control_systems: "Access Control",
+        security_training: "Training",
+        system_maintenance: "Maintenance",
+        newsletter: "Newsletter",
+        subscribe: "Subscribe for security tips",
+        all_rights: "All rights reserved.",
+
+        // NEW: Partners section
+        partners_badge: "Our partners",
+        partners_title: "Brands & Partners",
+        partners_desc: "We work with trusted brands to ensure quality and reliability.",
+
+        // NEW: Promo content
+        promo_title: "Greetings from Stadtech Services!",
+        promo_li_1: "Software Licensing & Activation",
+        promo_li_2: "Access Control Systems (ZKTeco, Hikvision)",
+        promo_li_3: "Hotel Smart Locks (ZKTeco, Dahua)",
+        promo_li_4: "CCTV Surveillance Solutions (Dahua, Hikvision, Uniview)",
+        promo_li_5: "Smart Parking Solutions (Hikvision, ZKTeco)",
+        promo_badge_1: "✅ Authorized partners",
+        promo_badge_2: "✅ End-to-end service",
+        promo_badge_3: "✅ Customized solutions",
+        promo_badge_4: "✅ Competitive pricing",
+        promo_badge_5: "✅ 24/7 support",
+        promo_cta_btn: "Reply “CALL ME”",
+        promo_warranty: "All installations include a 2-year warranty + 3 months free maintenance."
+      },
+
+      ar: {
+        lang_code: "ar",
+        direction: "rtl",
+        home: "الرئيسية",
+        services: "الخدمات",
+        partners_nav: "الشركاء",
+        about: "عن الشركة",
+        contact: "اتصل بنا",
+        get_quote: "طلب عرض سعر",
+        available_24: "متاح 24/7",
+        hero_title: "حلول إلكترونية أمنية احترافية",
+        hero_desc: "حلول إلكترونية أمنية احترافية في طنجة، المغرب. التثبيت والتدريب والصيانة لأنظمة المراقبة والتحكم في الوصول وأنظمة الإنذار.",
+        contact_us: "اتصل بنا",
+        our_services: "خدماتنا",
+        years_exp: "سنوات الخبرة",
+        projects: "مشاريع منجزة",
+        support: "الدعم",
+        our_solutions: "حلولنا",
+        cctv: "أنظمة المراقبة",
+        cctv_desc: "مراقبة عالية الدقة",
+        access_control: "التحكم في الوصول",
+        access_desc: "بصمة الإصبع",
+        alarm_systems: "أنظمة الإنذار",
+        alarm_desc: "حماية 24/7",
+        network_sec: "أمن الشبكات",
+        network_desc: "البنية التحتية",
+        certified: "معتمد ومرخص",
+        guarantee: "ضمان الجودة",
+        what_we_offer: "ما نقدمه",
+        professional_services: "خدماتنا المهنية",
+        comprehensive_solutions: "حلول أمنية شاملة مصممة لتلبية احتياجاتك",
+        installation: "التثبيت",
+        installation_desc: "تثبيت احترافي لجميع أنظمة الأمان بما في ذلك أنظمة المراقبة والتحكم في الوصول وأنظمة الإنذار.",
+        site_assessment: "تقييم وتخطيط الموقع",
+        equipment_procurement: "توريد المعدات",
+        professional_install: "التثبيت الاحترافي",
+        system_testing: "اختبار وتشغيل النظام",
+        training: "التدريب",
+        training_desc: "برامج تدريبية شاملة لموظفيك لاستخدام وإدارة أنظمة الأمان بفعالية.",
+        system_training: "التدريب على تشغيل النظام",
+        maintenance: "إجراءات الصيانة",
+        emergency: "بروتوكولات الطوارئ",
+        refreshers: "الدعم المستمر",
+        service_maintenance: "الخدمة والصيانة",
+        service_desc: "صيانة دورية وخدمات إصلاح سريعة لضمان عمل أنظمة الأمان دائماً.",
+        preventive: "الصيانة الوقائية",
+        emergency_repairs: "إصلاحات طوارئ 24/7",
+        upgrades: "تحديثات النظام",
+        remote_support: "المراقبة عن بعد",
+        about_us: "من نحن",
+        why_choose: "لماذا تختار ستاند تيك؟",
+        why_desc: "مع أكثر من 15 عاماً من الخبرة في مجال الإلكترونيات الأمنية، تقدم ستاند تيك حلولاً موثوقة واحترافية للعملاء السكنيين والتجاريين.",
+        certified_tech: "فنيون معتمدون",
+        customer_satisfaction: "رضا العملاء",
+        response_time: "وقت الاستجابة",
+        expertise: "خبرتنا",
+        intercom: "أنظمة الاتصال الداخلي",
+        fire_detection: "كشف الحرائق",
+        support_24: "دعم متاح 24/7",
+        support_desc: "الرد على مكالمات الطوارئ خلال 30 دقيقة",
+        get_in_touch: "تواصل معنا",
+        contact_standtech: "اتصل بـ StandTech",
+        contact_desc: "تواصل معنا للحصول على استشارة مجانية أو عرض سعر",
+        send_message: "أرسل لنا رسالة",
+        full_name: "الاسم الكامل",
+        email: "البريد الإلكتروني",
+        phone: "الهاتف",
+        service_needed: "الخدمة المطلوبة",
+        select_service: "اختر خدمة",
+        message: "الرسالة",
+        ask_quote: "طلب عرض سعر",
+        contact_info: "معلومات الاتصال",
+        our_location: "موقعنا",
+        phone_number: "الهاتف",
+        email_address: "البريد الإلكتروني",
+        business_hours: "ساعات العمل",
+        monday_friday: "الإثنين - الجمعة: 8:30 - 18:30",
+        saturday: "السبت: 9:00 - 13:00",
+        emergency_service: "خدمة الطوارئ: 24/7",
+        quick_response: "ضمان الاستجابة السريعة",
+        response_guarantee: "نضمن الرد على جميع الاستفسارات خلال ساعتين عمل.",
+        emergency_guarantee: "الطوارئ خلال 30 دقيقة",
+        licensed_insured: "مزود خدمات إلكترونيات أمنية مرخص ومؤمن.",
+        quick_links: "روابط سريعة",
+        our_services_footer: "خدماتنا",
+        cctv_install: "تثبيت أنظمة المراقبة",
+        access_control_systems: "التحكم في الوصول",
+        security_training: "التدريب",
+        system_maintenance: "الصيانة",
+        newsletter: "النشرة الإخبارية",
+        subscribe: "اشترك للحصول على نصائح أمنية",
+        all_rights: "جميع الحقوق محفوظة.",
+
+        // NEW: Partners section
+        partners_badge: "شركاؤنا",
+        partners_title: "العلامات التجارية والشركاء",
+        partners_desc: "نعمل مع علامات موثوقة لضمان الجودة والاعتمادية.",
+
+        // NEW: Promo content
+        promo_title: "تحياتنا من Stadtech Services!",
+        promo_li_1: "ترخيص وتفعيل البرامج",
+        promo_li_2: "أنظمة التحكم في الدخول (ZKTeco, Hikvision)",
+        promo_li_3: "أقفال فندقية ذكية (ZKTeco, Dahua)",
+        promo_li_4: "حلول كاميرات المراقبة CCTV (Dahua, Hikvision, Uniview)",
+        promo_li_5: "حلول مواقف ذكية (Hikvision, ZKTeco)",
+        promo_badge_1: "✅ شركاء معتمدون",
+        promo_badge_2: "✅ خدمة متكاملة",
+        promo_badge_3: "✅ حلول مخصصة",
+        promo_badge_4: "✅ أسعار تنافسية",
+        promo_badge_5: "✅ دعم 24/7",
+        promo_cta_btn: "أرسل “CALL ME”",
+        promo_warranty: "جميع التركيبات تشمل ضمان سنتين + 3 أشهر صيانة مجانية."
+      }
+    };
+
+    // State
+    let currentLang = localStorage.getItem('standtech-lang') || 'fr';
+    let isDark = localStorage.getItem('standtech-dark') === 'true';
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      applyLanguage(currentLang);
+      applyDarkMode(isDark);
+      initScrollListener();
+      initMobileMenu();
+      initLanguageSwitcher();
+      initDarkToggle();
+    });
+
+    // Scroll to section
+    function scrollToSection(selector) {
+      const target = document.querySelector(selector);
+      if (target) {
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY - 80,
+          behavior: 'smooth'
         });
-    </script>
+      }
+    }
+
+    // Close mobile menu
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.querySelector('#mobileMenuBtn i').classList.remove('fa-times');
+      document.querySelector('#mobileMenuBtn i').classList.add('fa-bars');
+    }
+
+    // Apply language
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('standtech-lang', lang);
+
+      const t = translations[lang];
+      if (!t) return;
+
+      // Update HTML attributes
+      document.documentElement.lang = t.lang_code;
+      document.documentElement.dir = t.direction;
+
+      // Update all translatable elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) el.textContent = t[key];
+      });
+
+      // Update active language buttons
+      document.querySelectorAll('.lang-btn, .mobile-lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) btn.classList.add('active');
+      });
+    }
+
+    // Apply dark mode
+    function applyDarkMode(dark) {
+      isDark = dark;
+      localStorage.setItem('standtech-dark', dark.toString());
+
+      if (dark) {
+        document.body.classList.add('dark');
+        document.querySelectorAll('.dark-toggle i').forEach(i => {
+          i.classList.remove('fa-moon');
+          i.classList.add('fa-sun');
+        });
+      } else {
+        document.body.classList.remove('dark');
+        document.querySelectorAll('.dark-toggle i').forEach(i => {
+          i.classList.remove('fa-sun');
+          i.classList.add('fa-moon');
+        });
+      }
+    }
+
+    // Navbar scroll effect
+    function initScrollListener() {
+      window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      });
+    }
+
+    // Mobile menu
+    function initMobileMenu() {
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      menuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('open');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      });
+    }
+
+    // Language switcher
+    function initLanguageSwitcher() {
+      document.querySelectorAll('.lang-btn, .mobile-lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const lang = this.getAttribute('data-lang');
+          applyLanguage(lang);
+        });
+      });
+    }
+
+    // Dark toggle buttons
+    function initDarkToggle() {
+      document.getElementById('darkToggle').addEventListener('click', function() { applyDarkMode(!isDark); });
+      document.getElementById('darkToggleMobile').addEventListener('click', function() { applyDarkMode(!isDark); });
+    }
+  </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "3ed38e06d71a48aebe6e5b9d6a777079"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+
 </body>
 </html>
